@@ -1,0 +1,77 @@
+.screen-l {
+  position: absolute;
+  width: 50%;
+  background-color: @blue2;
+}
+
+.screen-l.a {
+  left: 0;
+  top: 0;
+  height: 45%;
+}
+
+.screen-l.b {
+  left: 0;
+  bottom: 0;
+  height: 55%;
+}
+
+.screen-r-a {
+  right: 0;
+  top: 0;
+  height: 45%;
+  padding-top: 44px;
+}
+
+.screen-r-b {
+  right: 0;
+  bottom: 0;
+  height: 55%;
+}
+
+.screen-r.active {
+  display: block;
+}
+
+.screen-r {
+  display: none;
+  position: absolute;
+  width: 50%;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  background-color: @blue2;
+}
+
+.screen-r.map {
+  background-color: @map;
+}
+
+.title {
+  padding: 5px 8px;
+  color: @green1;
+  background-color: @blue3;
+  overflow: hidden;
+  > p {
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    float: left;
+  }
+  > span {
+    color: @green2;
+    font-size: 1rem;
+    float: right;
+  }
+}
+
+.screen_toggle.active {
+  display: block !important;
+}
+
+.screen_toggle {
+  display: none;
+}
+
+.all-active {
+  display: block;
+}

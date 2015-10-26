@@ -1,0 +1,91 @@
+.body-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  width: 1920px;
+  height: 1080px;
+  margin: auto;
+}
+
+header {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  padding: 12px 24px;
+
+  color: @white;
+  background-color: @blue1;
+  > img {
+    position: absolute;
+    top: 10px;
+
+    width: 100px;
+  }
+  > h1 {
+    font-size: 1.8rem;
+    font-weight: 500;
+
+    margin-left: 110px;
+
+    letter-spacing: 2px;
+  }
+}
+
+.screenfull {
+  position: absolute;
+  top: 10px;
+  right: 24px;
+
+  width: 24px;
+  height: 24px;
+
+  cursor: pointer;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+
+  opacity: .6;
+  background-image: url('../img/maximize-2.svg');
+  &:hover {
+    opacity: 1;
+  }
+}
+
+nav {
+  position: absolute;
+  z-index: 10;
+  top: 44px;
+  bottom: 0;
+  left: 0;
+
+  display: none;
+
+  width: 70px;
+
+  background-color: @blue3;
+  > a {
+    font-size: 1rem;
+
+    display: block;
+
+    padding: 8px 0;
+
+    cursor: pointer;
+    text-align: center;
+
+    color: @white;
+  }
+  > a.active {
+    color: @blue3;
+    background-color: @green1;
+  }
+}
+
+nav.active {
+  display: block;
+}

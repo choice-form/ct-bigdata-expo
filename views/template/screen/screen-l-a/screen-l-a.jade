@@ -1,0 +1,25 @@
+section.screen-l.a
+    .tabs
+        ul.tab-item
+            li
+                a.tablist(href="#tab-1" name="#house" rel= '.area' rev= '#map')
+                    i.icon-building
+                span 房 产
+            li
+                a.tablist(href="#tab-2" name="#tourism" rel= '.date' rev= '#tour')
+                    i.icon-takeoff
+                span 旅 游
+            li
+                a.tablist(href="#tab-3" name="#car" rel= '.area' rev= '#map')
+                    i.icon-car
+                span 汽 车
+
+        #tab-1.panel
+            include data-house
+            include grid-house
+        #tab-2.panel
+            include data-tourism
+        #tab-3.panel
+            include data-car
+            include grid-car
+

@@ -1,0 +1,71 @@
+.screen-r-a {
+  > .title {
+    margin: 12px 0;
+    width: 48%;
+    &:nth-child(1) {
+      float: left;
+    }
+    &:nth-child(2) {
+      float: right;
+      margin-right: 12px;
+    }
+  }
+  > .chart {
+    width: 48%;
+    height: 387px;
+    float: left;
+    &:last-child {
+      float: right;
+      margin-right: 12px;
+    }
+  }
+}
+
+.screen-r-b {
+  > .title {
+    float: left;
+    margin: 12px 12px 12px 0;
+    &:nth-child(-n+2) {
+      width: 39%;
+    }
+    &:nth-child(3) {
+      margin: 12px 12px 0 0;
+      width: 17%;
+      float: right;
+    }
+    > p {
+      font-size: 1rem;
+    }
+  }
+  > .chart {
+    float: left;
+    margin: 0 12px 0 0;
+    height: 516px;
+    width: 39%;
+    background-color: @chart;
+  }
+  > ul {
+    height: 516px;
+    margin: 0 12px 0 0 !important;
+    width: 17% !important;
+    float: right !important;
+    background-color: transparent !important;
+    > li {
+      height: 33.3%;
+      color: @green1;
+      padding: 2.8rem 8px;
+
+      &:nth-of-type(-n+2) {
+        border-bottom: 1px solid @green2;
+      }
+      > p {
+        font-size: 1.4rem;
+        margin-bottom: 24px;
+      }
+      > h2 {
+        font-size: 2rem;
+        line-height: 2.2rem;
+      }
+    }
+  }
+}

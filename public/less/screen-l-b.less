@@ -1,0 +1,288 @@
+.screenB {
+    display: none;
+}
+
+.screenB.active {
+    display: block;
+}
+
+.screen_toggle.b {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 70px;
+    > .title {
+        margin: 12px;
+    }
+}
+
+.screenBchart {
+    position: relative;
+}
+
+.chartHouse {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
+
+    height: 528px;
+    .chart {
+        position: absolute;
+
+        float: left;
+
+        > p {
+            font-size: 1.1rem;
+            line-height: 1.2rem;
+
+            padding: 4px;
+
+            color: @green2;
+            background-color: fade(@blue3, 48%);
+        }
+        &:nth-of-type(1) {
+            top: 0;
+            left: 0;
+
+            width: 38%;
+            height: 30%;
+            > h1 {
+                font-size: 3rem;
+                line-height: 3rem;
+
+                position: relative;
+
+                float: left;
+
+                margin-top: 24px;
+
+                color: @green1;
+                > span {
+                    font-size: 1rem;
+                    font-weight: normal;
+                    line-height: 1.2rem;
+
+                    position: absolute;
+                    right: -30px;
+                    bottom: .2rem;
+
+                    padding: 0 2px;
+
+                    color: @white;
+                    border: 1px solid fade(@white, 24%);
+                    border-radius: 2px;
+                    background-color: fade(@white, 24%);
+                }
+            }
+        }
+        &:nth-of-type(2) {
+            top: 0;
+            right: 0;
+
+            width: 60%;
+            height: 50%;
+        }
+        &:nth-of-type(3) {
+            bottom: 0;
+            left: 0;
+
+            width: 38%;
+            height: 75%;
+        }
+        &:nth-child(4) {
+            right: 0;
+            bottom: 0;
+
+            width: 60%;
+            height: 50%;
+        }
+    }
+}
+
+.whole {
+    height: 100%;
+    > .chart {
+        position: absolute;
+        &:nth-child(1) {
+            top: 16px;
+            bottom: 0;
+            left: 12px;
+
+            width: 20%;
+        }
+        &:nth-child(2) {
+            top: 16px;
+            right: 12px;
+
+            width: 76%;
+            height: 279px;
+        }
+        &:nth-child(3) {
+            right: 12px;
+            bottom: 12px;
+
+            width: 76%;
+            height: 279px;
+        }
+        > p {
+            font-size: 1rem;
+            line-height: 1.2rem;
+
+            margin-bottom: 6px;
+            padding: 5px;
+
+            color: @green1;
+            background-color: @blue3;
+        }
+        > span {
+            font-size: 1rem;
+
+            display: block;
+
+            margin-bottom: .5rem;
+            padding: .7rem;
+
+            text-align: center;
+
+            background-color: @green2;
+        }
+    }
+}
+
+.chartCar {
+    height: 524px;
+    > .chart {
+        &:nth-child(-n+3) {
+            float: left;
+
+            width: 33.3%;
+            padding: 0 24px 12px 24px;
+            > p {
+                font-size: 1.2rem;
+
+                margin-bottom: 12px;
+
+                color: @green2;
+            }
+            > h1 {
+                font-size: 3rem;
+                line-height: 3rem;
+
+                position: relative;
+
+                float: left;
+
+                color: @green1;
+                > span {
+                    font-size: 1rem;
+                    font-weight: normal;
+                    line-height: 1.2rem;
+
+                    position: absolute;
+                    right: -30px;
+                    bottom: .3rem;
+
+                    padding: 0 2px;
+
+                    color: @white;
+                    border: 1px solid fade(@white, 24%);
+                    border-radius: 2px;
+                    background-color: fade(@white, 24%);
+                }
+            }
+        }
+        &:nth-child(n+4) {
+            position: absolute;
+            bottom: 0;
+            left: 12px;
+
+            width: 54%;
+            height: 420px;
+            > p {
+                font-size: 1.2rem;
+                line-height: 1.4rem;
+
+                margin-bottom: 12px;
+                padding: 5px;
+
+                color: @green1;
+                background-color: @blue3;
+            }
+        }
+        &:nth-child(5) {
+            right: 12px;
+            left: auto;
+
+            width: 40%;
+            height: 420px;
+            table {
+                height: 376px;
+            }
+        }
+    }
+}
+
+.grid-car-brands {
+    pointer-events: none;
+    table {
+        th {
+            font-size: 1rem;
+            &:first-child {
+                td {
+                    padding: 2px 0;
+                }
+            }
+
+            &:nth-child(-n+3) {
+                background-color: fade(@blue3, 46%);
+            }
+            &:nth-child(4) {
+                background: transparent;
+            }
+            td {
+                padding: 2px 0;
+            }
+        }
+    }
+}
+
+.title.col {
+    > p {
+        &:nth-of-type(1) {
+            width: 55%;
+        }
+    }
+}
+
+.tourism-top {
+    float: left;
+
+    width: 50%;
+    margin-left: 12px;
+    .grid-tourism {
+        width: 100%;
+        height: 516px;
+        > table {
+            height: 516px;
+            tr {
+                th {
+                    font-size: 1rem;
+
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+
+.tourism-chart {
+    float: right;
+
+    width: 45%;
+    height: 516px;
+    margin-right: 12px;
+
+    background-color: @chart;
+}

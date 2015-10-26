@@ -1,9 +1,14 @@
 {
-  "name": "ct-bitdata-expo",
+  "name": "ct-bigdata-expo",
   "version": "0.0.1",
   "ignore": [
     "**/.*",
     "node_modules",
     "components"
-  ]
+  ],
+  "dependencies": {
+    "artTemplate": "https://github.com/aui/artTemplate",
+    "request": "~2.65.1",
+    "jquery": "~2.1.4"
+  }
 }

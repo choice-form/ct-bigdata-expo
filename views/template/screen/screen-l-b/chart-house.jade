@@ -1,0 +1,26 @@
+.screen_toggle.b.all.active
+    .title
+        p 新房平均价格趋势（一年）
+    .chartHouse.screenBchart
+        include ../../chart/chartHouse_A.jade
+
+
+.screen_toggle.b.dis
+    .title
+        p 静安区 - 某某居委
+    .chartHouse.screenBchart
+        .chart
+            p 小区人数
+            h1 34534567
+                span 人
+        .chart
+            p 年龄分布
+            include ../../chart/chartHouse_B.jade
+
+        .chart
+            p 男女比例
+            include ../../chart/chartHouse_C.jade
+
+        .chart
+            p 距离地铁站
+            include ../../chart/chartHouse_D.jade
