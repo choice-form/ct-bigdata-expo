@@ -1,27 +1,8 @@
-var config = require("../config.js");
-
-function devHandler(data) {
-	// 开发模式
-	if (config.isDev) {
-		switch (funName) {
-			case value:
-
-				break;
-
-			default:
-				break;
-		}
-	} else {
-		// 部署模式
-	}
-}
-
-
-var doRequest = {
+var travel = {
 	/**
-	 * 旅游
-	 */
-	travel: function (data) {
+	* 旅游
+	*/
+	travelHandle: function (data, callback) {
 		var key = data.fun;
 		var date = data.date;
 		switch (key) {
@@ -64,27 +45,7 @@ var doRequest = {
 			default:
 				break;
 		}
-	},
-	/**
-	 * 汽车
-	 */
-	car: function (data) {
-
-	},
-	/**
-	 * 房产
-	 */
-	realty: function (data) {
-		var key = data.fun;
-		switch (key) {
-			case "newHouse":
-
-				break;
-
-			default:
-				break;
-		}
 	}
 }
 
-module.exports = doRequest;
+module.exports = travel;
