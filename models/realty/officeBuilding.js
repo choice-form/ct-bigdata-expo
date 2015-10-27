@@ -38,3 +38,5 @@ var officeBuilding = {
 		}
 	]
 }
+
+module.exports = officeBuilding;

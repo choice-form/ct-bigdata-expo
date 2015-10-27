@@ -21,3 +21,5 @@ var careOfVillageRank = {
 		}
 	]
 }
+
+module.exports = careOfVillageRank;

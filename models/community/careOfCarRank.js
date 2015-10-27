@@ -21,3 +21,5 @@ var careOfCarRank = {
 		},
 	]
 }
+
+module.exports = careOfCarRank;

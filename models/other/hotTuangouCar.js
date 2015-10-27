@@ -33,3 +33,5 @@ var hotTuangouCar = {
 		},
 	]
 }
+
+module.exports = hotTuangouCar;

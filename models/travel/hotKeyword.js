@@ -2,7 +2,7 @@
 // 表格显示
 // 请求：date，请求的月份/天，比如:"2015-10"/"2015-10-01"; 不传date则返回最新一天数据
 // 返回：本月每天/某天的数据，从高到低排序
-var hotApp = {
+var hotKeyword = {
 	code:"000",
 	msg:"success",
 	result:[
@@ -20,3 +20,5 @@ var hotApp = {
 		},	
 	]
 }
+
+module.exports = hotKeyword;

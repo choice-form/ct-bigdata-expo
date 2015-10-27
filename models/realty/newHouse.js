@@ -44,3 +44,5 @@ var newHouse = {
 		}
 	]
 }
+
+module.exports = newHouse;

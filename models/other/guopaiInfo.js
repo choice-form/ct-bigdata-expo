@@ -25,3 +25,5 @@ var guopaiInfo = {
 		},
 	]
 }
+
+module.exports = guopaiInfo;

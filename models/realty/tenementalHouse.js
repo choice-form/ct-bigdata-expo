@@ -38,3 +38,5 @@ var tenementalHouse = {
 		}
 	]
 }
+
+module.exports = tenementalHouse;

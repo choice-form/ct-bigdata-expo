@@ -44,3 +44,5 @@ var secondHandHouse = {
 		}
 	]
 }
+
+module.exports = secondHandHouse;

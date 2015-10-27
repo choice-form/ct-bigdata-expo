@@ -20,3 +20,5 @@ var hotTravel = {
 		},	
 	]
 }
+
+module.exports = hotTravel;

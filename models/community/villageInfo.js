@@ -50,3 +50,5 @@ var villageInfo = {
 		villagenearestdist5: 234
 	}
 }
+
+module.exports = villageInfo

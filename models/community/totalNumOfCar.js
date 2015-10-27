@@ -9,3 +9,5 @@ var totalNumOfCar = {
 		peoplenum:[324234,2313,352352]
 	}
 }
+
+module.exports = totalNumOfCar;

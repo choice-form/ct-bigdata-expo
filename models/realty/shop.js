@@ -39,3 +39,4 @@ var shop = {
 	]
 }
 
+module.exports = shop;

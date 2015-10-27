@@ -30,3 +30,5 @@ var villageRankOfCarModels = {
 		},
 	]
 }
+
+module.exports = villageRankOfCarModels;

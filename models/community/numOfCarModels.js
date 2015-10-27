@@ -25,3 +25,5 @@ var numOfCarModels = {
 		},
 	]
 }
+
+module.exports = numOfCarModels;

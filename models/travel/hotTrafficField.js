@@ -2,7 +2,7 @@
 // 图表
 // 请求：date，请求的月份/天，比如:"2015-10"/"2015-10-01"; 不传date则返回最新一天数据
 // 返回：本月每天/某天的数据，从人数高到低排序
-var hotTrafficLocal = {
+var hotTrafficField = {
 	code: "000",
 	msg: "success",
 	result: [
@@ -23,3 +23,5 @@ var hotTrafficLocal = {
 		}
 	]
 }
+
+module.exports = hotTrafficField;

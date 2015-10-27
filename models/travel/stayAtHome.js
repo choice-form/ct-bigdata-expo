@@ -14,3 +14,5 @@ var stayAtHome = {
 		}
 	]
 }
+
+module.exports = stayAtHome;

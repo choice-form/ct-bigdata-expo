@@ -1,7 +1,7 @@
 var express = require('express');
 var travel = require('../controllers/travel');
 var realty = require('../controllers/realty');
-var carl = require('../controllers/car');
+var car = require('../controllers/car');
 
 var router = express.Router();
 
@@ -15,7 +15,6 @@ router.get('/', function (req, res) {
 router.get('/travel', function (req, res) {
   res.render('travel', { title: '旅游' });
 });
-
 
 // post 旅游
 router.post('/travel', function (req, res) {
@@ -32,7 +31,7 @@ router.post('/travel', function (req, res) {
 // post 汽车
 router.post('/car', function (req, res) {
   var rq = req.body;
-  doRequest.car(rq, function (err, result) {
+  car.carHandle(rq, function (err, result) {
     if (err) {
       res.send(err);
     } else {
@@ -40,10 +39,11 @@ router.post('/car', function (req, res) {
     }
   })
 })
+
 // post 房产
 router.post('/realty', function (req, res) {
   var rq = req.body;
-  doRequest.realty(rq, function (err, result) {
+  realty.realtyHandle(rq, function (err, result) {
     if (err) {
       res.send(err);
     } else {

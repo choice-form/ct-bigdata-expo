@@ -9,3 +9,5 @@ var trend = {
 		avgpricetrend: [29617, 31043, 31043, 31043, 31043, 31043, 31043, 31043],
 	}
 }
+
+module.exports = trend;

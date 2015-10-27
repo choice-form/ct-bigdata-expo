@@ -32,3 +32,5 @@ var villagerankOfHouseModels = {
 		},
 	]
 }
+
+module.exports = villagerankOfHouseModels;

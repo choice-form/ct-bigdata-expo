@@ -40,3 +40,5 @@ var community = {
 		}
 	]
 }
+
+module.exports = community;

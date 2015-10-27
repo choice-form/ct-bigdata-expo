@@ -28,3 +28,5 @@ var hotApp = {
 		}
 	]
 }
+
+module.exports = hotApp;

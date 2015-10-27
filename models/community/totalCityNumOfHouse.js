@@ -10,3 +10,5 @@ var totalCityNumOfHouse = {
 		avgprice: [30211,1312,324324],
 	}
 }
+
+module.exports = totalCityNumOfHouse;

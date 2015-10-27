@@ -23,3 +23,5 @@ var hotTrafficLocal = {
 		}
 	]
 }
+
+module.exports = hotTrafficLocal;

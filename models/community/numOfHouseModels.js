@@ -29,3 +29,5 @@ var numOfHouseModels = {
 		}
 	]
 }
+
+module.exports = numOfHouseModels;

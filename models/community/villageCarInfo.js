@@ -46,3 +46,5 @@ var villageCarInfo = {
 		},
 	]
 }
+
+module.exports = villageCarInfo

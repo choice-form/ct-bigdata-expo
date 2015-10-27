@@ -50,3 +50,5 @@ var villageHouseInfo = {
 		},
 	]
 }
+
+module.exports = villageHouseInfo;

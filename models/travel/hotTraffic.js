@@ -20,3 +20,5 @@ var hotTraffic = {
 		}
 	]
 }
+
+module.exports = hotTraffic;
