@@ -1,0 +1,21 @@
+html
+    include ../../ct_big_sxx/views/template/head
+body
+    .body-wrapper
+        header
+            img(src= '../img/ct-logo.svg' height= '24')
+            h1=title
+
+        include ../../ct_big_sxx/views/template/nav
+
+        include ../../ct_big_sxx/views/template/screen/screen-l-a/screen-l-a
+
+        include ../../ct_big_sxx/views/template/screen/screen-l-b/screen-l-b
+
+        include ../../ct_big_sxx/views/template/screen/screen-r/screen-r
+
+        include ../../ct_big_sxx/views/template/screen/screen-r-map/screen-map
+
+    include ../../ct_big_sxx/views/footer
+    script
+      |tabSwitch.car()
