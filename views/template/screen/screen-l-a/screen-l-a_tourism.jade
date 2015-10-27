@@ -5,7 +5,7 @@ section.screen-l.a
                 a.tablist(href="#tab-1" name="#house" rel= '.area' rev= '#map')
                     i.icon-building
                 span 房 产
-            li
+            li.active
                 a.tablist(href="#tab-2" name="#tourism" rel= '.date' rev= '#tour')
                     i.icon-takeoff
                 span 旅 游
@@ -14,12 +14,6 @@ section.screen-l.a
                     i.icon-car
                 span 汽 车
 
-        #tab-1.panel(style='display: none')
-            include data-house
-            include grid-house
-        #tab-2.panel(style='display: none')
+        #tab-2.panel
             include data-tourism
-        #tab-3.panel(style='display: none')
-            include data-car
-            include grid-car
 
