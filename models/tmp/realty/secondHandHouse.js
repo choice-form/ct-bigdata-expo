@@ -1,8 +1,8 @@
-// 新房 
+//二手房
 // 请求：villagecode 小区id
-// 请求：
+// 请求：date 月份 例如："2015-10", 不传date则返回最新一个月数据
 // 返回：
-var newHouse = {
+var secondHandHouse = {
 	code: "000",
 	msg: "success",
 	result: [
@@ -45,4 +45,4 @@ var newHouse = {
 	]
 }
 
-module.exports = newHouse;
+module.exports = secondHandHouse;

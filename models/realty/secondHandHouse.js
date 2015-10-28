@@ -1,6 +1,6 @@
 //二手房
 // 请求：villagecode 小区id
-// 请求：date 月份 例如："2015-10", 不传date则返回最新一个月数据
+// 请求：
 // 返回：
 var secondHandHouse = {
 	code: "000",
