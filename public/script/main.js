@@ -1,29 +1,46 @@
 
 var tabSwitch = {
   'house': function () {
+    //设置screen—a
     $('.tabs > .panel').css('display', 'none');
     $('#tab-1').css('display', 'block');
 
     $('.tabs > .tab-item > li').removeClass('active');
     $('.tabs > .tab-item > li').eq(0).addClass('active');
+
+    //设置screen—b
+    $('.screen-l > .screenB').removeClass('active');
+    $('#house').addClass('active');
   },
   'tourism': function () {
+    //设置screen—a
     $('.tabs > .panel').css('display', 'none');
     $('#tab-2').css('display', 'block');
 
     $('.tabs > .tab-item > li').removeClass('active');
     $('.tabs > .tab-item > li').eq(1).addClass('active');
+
+    //设置screen—b
+    $('.screen-l > .screenB').removeClass('active');
+    $('#tourism').addClass('active');
+
+
   },
   'car': function () {
+    //设置screen—a
     $('.tabs > .panel').css('display', 'none');
     $('#tab-3').css('display', 'block');
 
     $('.tabs > .tab-item > li').removeClass('active');
     $('.tabs > .tab-item > li').eq(2).addClass('active');
+
+    //设置screen—b
+    $('.screen-l > .screenB').removeClass('active');
+    $('#car').addClass('active');
   }
 }
 
-var clickEffect = {
+/*var clickEffect = {
   'district': function () {
 
     $('.district').click(function () {
@@ -77,5 +94,5 @@ $(document).ready(function () {
 
 });
 
-console.log('123');
+console.log('123');*/
 

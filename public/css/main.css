@@ -545,6 +545,22 @@ table tr.active td:nth-child(2) {
 .grid-tourism table {
   height: 399px;
 }
+#js-realty-screen-a > li {
+  list-style: none;
+}
+#js-realty-screen-a > li > .data-column {
+  height: 20%;
+}
+#js-realty-screen-a > li > .data-column > h1 {
+  line-height: 2.2rem;
+}
+#js-realty-screen-a > li > .data-column:first-child {
+  float: left;
+}
+#js-realty-screen-a > li > .data-column:last-child {
+  float: right;
+  border-bottom: 1px solid #52bbb9;
+}
 .screenB {
   display: none;
 }

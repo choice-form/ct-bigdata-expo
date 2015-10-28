@@ -8,9 +8,9 @@ var totalCityNumOfHouse = {
 		time: "50周",
 		newhouse:{
 			// 房屋数量
-			num:1231,
+			num:14562,
 			// 平均价格
-			avgprice:12341
+			avgprice:31000
 		},
 		secondhandhouse:{
 			num:1231,

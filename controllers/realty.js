@@ -21,7 +21,7 @@ var realty = {
 			// case "villageHouseInfo":
 			// 	result = require('../models/community/villageHouseInfo');
 			// 	callback(null, result);
-				
+
 				// break;
 			// 新房
 			case "newHouse":
@@ -81,6 +81,11 @@ var realty = {
 				result = require('../models/realty/totalCityNumOfHouse');
 				callback(null, result);
 				break;
+      // 全市关心房产的相关数据（add for sxx）
+      case "totalDataCityOfHouse":
+        result = require('../models/realty/totalDataCityOfHouse');
+        callback(null, result);
+        break;
 			default:
 				break;
 		}
