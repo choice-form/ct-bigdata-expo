@@ -8,12 +8,12 @@ var router = express.Router();
 /* GET home page. */
 // get 房产、汽车页面
 router.get('/', function (req, res) {
-  res.render('main', { title: '上海电信大数据区域洞察信息展示' });
+  res.render('main_house', { title: '上海电信大数据区域洞察信息展示' });
 });
 
 // get 旅游页面
-router.get('/house', function (req, res) {
-  res.render('main_house', { title: '旅游' });
+router.get('/realty', function (req, res) {
+  res.render('main_house', { title: '房产' });
 });
 
 router.get('/travel', function (req, res) {
@@ -21,7 +21,7 @@ router.get('/travel', function (req, res) {
 });
 
 router.get('/car', function (req, res) {
-  res.render('main_car', { title: '旅游' });
+  res.render('main_car', { title: '汽车' });
 });
 
 // post 旅游
