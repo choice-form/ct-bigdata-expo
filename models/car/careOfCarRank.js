@@ -19,6 +19,62 @@ var careOfCarRank = {
 			villagerank: 2,
 			villagecareofcarnum: 242435
 		},
+		{
+			time: "50周",
+			villagecode: 215032432,
+			villagename: "闵行街道",
+			villagerank: 2,
+			villagecareofcarnum: 242435
+		},
+		{
+			time: "50周",
+			villagecode: 215032432,
+			villagename: "闵行街道",
+			villagerank: 2,
+			villagecareofcarnum: 242435
+		},
+		{
+			time: "50周",
+			villagecode: 215032432,
+			villagename: "闵行街道",
+			villagerank: 2,
+			villagecareofcarnum: 242435
+		},
+		{
+			time: "50周",
+			villagecode: 215032432,
+			villagename: "徐汇街道",
+			villagerank: 1,
+			villagecareofcarnum: 242435
+		},
+		{
+			time: "50周",
+			villagecode: 215032432,
+			villagename: "闵行街道",
+			villagerank: 2,
+			villagecareofcarnum: 242435
+		},
+		{
+			time: "50周",
+			villagecode: 215032432,
+			villagename: "闵行街道",
+			villagerank: 2,
+			villagecareofcarnum: 242435
+		},
+		{
+			time: "50周",
+			villagecode: 215032432,
+			villagename: "闵行街道",
+			villagerank: 2,
+			villagecareofcarnum: 242435
+		},
+		{
+			time: "50周",
+			villagecode: 215032432,
+			villagename: "闵行街道",
+			villagerank: 2,
+			villagecareofcarnum: 242435
+		}
 	]
 }
 

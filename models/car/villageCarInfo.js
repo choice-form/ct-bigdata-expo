@@ -10,19 +10,19 @@ var villageCarInfo = {
 		villagecode: 2121231,
 		villagename: "徐汇街道",
 		eleccarnum: 2342,
-		eleccarnumprop: "22%",
+		eleccarnumprop: "10",
 		highgradecarnum: 123412,
-		highgradecarnumprop: "33%",
+		highgradecarnumprop: "10",
 		suvcarnum: 34523,
-		suvcarnumprop: "67%",
+		suvcarnumprop: "10",
 		normalcarnum: 32424,
-		normalcarnumprop: "67%",
+		normalcarnumprop: "10",
 		supercarnum: 234,
-		supercarnumprop: "22%",
-		businesscarunm: 424,
-		businesscarunmprop: "32%",
-		soufangkeyword: ["福特", "马自达", "大众"],
-		careofbradntop10: ["福特", "马自达", "大众"]
+		supercarnumprop: "10",
+		businesscarnum: 42400,
+		businesscarnumprop: "50",
+		soufangkeyword: ["福特", "马自达", "大众","福特", "马自达", "大众","福特", "马自达", "大众","福特"],
+		careofbradntop10: ["福特", "马自达", "大众","福特", "马自达", "大众","福特", "马自达", "大众","福特"]
 	}
 }
 
