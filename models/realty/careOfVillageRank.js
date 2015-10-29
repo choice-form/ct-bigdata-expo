@@ -18,7 +18,61 @@ var careOfVillageRank = {
 			villagename: "闵行街道",
 			rank: 2,
 			careofhousenum: 242435
-		}
+		},
+    {
+      time: "50周",
+      villagecode: 215032432,
+      villagename: "徐汇街道",
+      rank: 1,
+      careofhousenum: 242435
+    },
+    {
+      time: "50周",
+      villagecode: 215032432,
+      villagename: "闵行街道",
+      rank: 2,
+      careofhousenum: 242435
+    },
+    {
+      time: "50周",
+      villagecode: 215032432,
+      villagename: "徐汇街道",
+      rank: 1,
+      careofhousenum: 242435
+    },
+    {
+      time: "50周",
+      villagecode: 215032432,
+      villagename: "闵行街道",
+      rank: 2,
+      careofhousenum: 242435
+    },{
+      time: "50周",
+      villagecode: 215032432,
+      villagename: "徐汇街道",
+      rank: 1,
+      careofhousenum: 242435
+    },
+    {
+      time: "50周",
+      villagecode: 215032432,
+      villagename: "闵行街道",
+      rank: 2,
+      careofhousenum: 242435
+    },{
+      time: "50周",
+      villagecode: 215032432,
+      villagename: "徐汇街道",
+      rank: 1,
+      careofhousenum: 242435
+    },
+    {
+      time: "50周",
+      villagecode: 215032432,
+      villagename: "闵行街道",
+      rank: 2,
+      careofhousenum: 242435
+    }
 	]
 }
 
