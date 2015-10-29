@@ -653,18 +653,33 @@ table tr.active td:nth-child(2) {
   top: 16px;
   bottom: 0;
   left: 12px;
-  width: 20%;
+  width: 30%;
+}
+.whole > .chart:nth-child(1) > ul > li {
+  background-color: #52bbb9;
+  font-size: 1rem;
+  display: block;
+  margin-bottom: .5rem;
+  padding: .7rem;
+  text-align: center;
+  width: 50%;
+}
+.whole > .chart:nth-child(1) > ul > li:first-child {
+  float: left;
+}
+.whole > .chart:nth-child(1) > ul > li:last-child {
+  float: right;
 }
 .whole > .chart:nth-child(2) {
   top: 16px;
   right: 12px;
-  width: 76%;
+  width: 66%;
   height: 279px;
 }
 .whole > .chart:nth-child(3) {
   right: 12px;
   bottom: 12px;
-  width: 76%;
+  width: 66%;
   height: 279px;
 }
 .whole > .chart > p {
@@ -674,14 +689,6 @@ table tr.active td:nth-child(2) {
   padding: 5px;
   color: #9dcc3b;
   background-color: #1d2134;
-}
-.whole > .chart > span {
-  font-size: 1rem;
-  display: block;
-  margin-bottom: .5rem;
-  padding: .7rem;
-  text-align: center;
-  background-color: #52bbb9;
 }
 .chartCar {
   height: 524px;
