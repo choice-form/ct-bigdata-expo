@@ -50,8 +50,8 @@ var travel = {
 				callback(null, result);
 				break;
 			// 是否外出情况
-			case "sayAtHome":
-				result = require('../models/travel/sayAtHome');
+			case "stayAtHome":
+				result = require('../models/travel/stayAtHome');
 				callback(null, result);
 				break;
 			default:
