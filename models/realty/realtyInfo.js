@@ -4,56 +4,20 @@
 var realtyInfo = {
 	code: "000",
 	msg: "success",
-	result: {
-		newhouse: {
-			// 房屋数量
+	result: [
+		{
+			type: "新房",
 			sum: 289,
-			// 总面积
-			area: 2299,
-			// 平均价格
+			area: 229,
 			averageprice: 62000,
-			// 平均面积
-			averagearea: 80
+			averagearea: 800
 		},
-		secondhandhouse: {
-			// 房屋数量
+		{
+			type: "二手房",
 			sum: 289,
-			// 总面积
-			area: 2299,
-			// 平均价格
+			area: 229,
 			averageprice: 62000,
-			// 平均面积
-			averagearea: 80
-		},
-		tenementalhouse: {
-			// 房屋数量
-			sum: 289,
-			// 总面积
-			area: 2299,
-			// 平均价格
-			averageprice: 62000,
-			// 平均面积
-			averagearea: 80
-		},
-		officebuilding: {
-			// 房屋数量
-			sum: 289,
-			// 总面积
-			area: 2299,
-			// 平均价格
-			averageprice: 62000,
-			// 平均面积
-			averagearea: 80
-		},
-		shop: {
-			// 房屋数量
-			sum: 289,
-			// 总面积
-			area: 2299,
-			// 平均价格
-			averageprice: 62000,
-			// 平均面积
-			averagearea: 80
+			averagearea: 800
 		}
-	}
+	]
 }
