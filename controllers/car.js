@@ -1,3 +1,5 @@
+var request = require("request");
+
 var car = {
 	/**
 	* 汽车

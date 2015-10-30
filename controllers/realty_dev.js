@@ -1,8 +1,3 @@
-var request = require("request");
-var config = require('../config');
-
-var url = config.ip + config.post + "/";
-
 var realty = {
 	/**
 	* 房产
@@ -27,7 +22,7 @@ var realty = {
 			// 	result = require('../models/community/villageHouseInfo');
 			// 	callback(null, result);
 
-			// break;
+				// break;
 			// 新房
 			case "newHouse":
 				result = require('../models/realty/newHouse');
@@ -63,17 +58,8 @@ var realty = {
 			// 	break;
 			// 关心房产的小区排名
 			case "careOfVillageRank":
-				// result = require('../models/realty/careOfVillageRank');
-				// callback(null, result);
-				var name = data.administrativearea;
-				request.get(url + key + "?" + "name" + name, function (err, res, body) {
-					if (err) {
-						callback(err);
-					} else {
-						callback(null, result);
-					}
-				})
-
+				result = require('../models/realty/careOfVillageRank');
+				callback(null, result);
 				break;
 			// 新房、二手房、出租房、写字楼、商铺 指标
 			case "realtyInfo":
@@ -95,11 +81,11 @@ var realty = {
 				result = require('../models/realty/totalCityNumOfHouse');
 				callback(null, result);
 				break;
-			// 全市关心房产的相关数据（add for sxx）
-			case "totalDataCityOfHouse":
-				result = require('../models/realty/totalDataCityOfHouse');
-				callback(null, result);
-				break;
+      // 全市关心房产的相关数据（add for sxx）
+      case "totalDataCityOfHouse":
+        result = require('../models/realty/totalDataCityOfHouse');
+        callback(null, result);
+        break;
 			default:
 				break;
 		}

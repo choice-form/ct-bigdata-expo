@@ -1,9 +1,9 @@
 var config = {
-	ip:"127.0.0.1",
-	post:"8080",
+	ip:"101.226.172.115",
+	post:"15100",
 	path:"/rjm-adp/services/soap/hgWebService?wsdl",
 	// isDev为true时以上不起作用
-	isDev:true
+	isDev:false
 }
 
 module.exports = config;
