@@ -973,7 +973,7 @@ table tr.active td:nth-child(2) {
   position: fixed;
   background-color: #99c748;
   width: 320px;
-  top: 32px;
+  top: 64px;
   right: 32px;
   padding: 12px;
 }
