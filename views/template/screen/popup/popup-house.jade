@@ -11,45 +11,32 @@
         li 商铺指标
     .popup_house_content
       ul
-        li.active
-          div
-            .header
-              span 新房数量
-            h1 6272
-              span 套
-          div
-            .header
-              span 新房数量
-            h1 6272
-              span 套
-          div
-            .header
-              span 新房数量
-            h1 6272
-              span 套
-          div
-            .header
-              span 新房数量
-            h1 6272
-              span 套
-        li
-          div
-            .header
-              span 新房数量
-            h1 6272
-              span 套
-          div
-            .header
-              span 新房数量
-            h1 6272
-              span 套
-          div
-            .header
-              span 新房数量
-            h1 6272
-              span 套
-          div
-            .header
-              span 新房数量
-            h1 6272
-              span 套
+        mixin list(name,active)
+          li(class= active)
+            div
+              span= name + "数量"
+              h1 6272
+                span 套
+            div
+              span= name + "总面积"
+              h1 6272
+                span 平方米
+            div
+              span= name + "平均价格"
+              h1 6272
+                span 元
+            div
+              span= name + "平均面积"
+              h1 6272
+                span 平方米
+        +list('新房','active')
+        +list('二手房')
+        +list('出租房')
+        +list('写字楼')
+        +list('商铺')
+
+
+
+
+
+
