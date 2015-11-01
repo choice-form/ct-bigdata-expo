@@ -663,7 +663,7 @@ table tr.active td:nth-child(2) {
   left: 12px;
   width: 30%;
 }
-.whole > .chart:nth-child(1) > ul > li {
+.whole > .chart:nth-child(1) div > ul > li {
   background-color: #52bbb9;
   font-size: 1rem;
   display: block;
@@ -672,10 +672,10 @@ table tr.active td:nth-child(2) {
   text-align: center;
   width: 50%;
 }
-.whole > .chart:nth-child(1) > ul > li:first-child {
+.whole > .chart:nth-child(1) div > ul > li:first-child {
   float: left;
 }
-.whole > .chart:nth-child(1) > ul > li:last-child {
+.whole > .chart:nth-child(1) div > ul > li:last-child {
   float: right;
 }
 .whole > .chart:nth-child(2) {
