@@ -63,6 +63,8 @@ var clickEffect = {
 							villageArr[i].marker = new BMap.Marker(villageArr[i].point);
 							map.addOverlay(villageArr[i].marker);
 							villageArr[i].marker.setAnimation(BMAP_ANIMATION_BOUNCE);
+							var label = new BMap.Label(villageArr[i].villagename);
+							villageArr[i].marker.setLabel(label);
 						}
 					})
 				})
@@ -84,14 +86,27 @@ var clickEffect = {
 				queryAjax({ fun: "numOfCarModels" }, function (res) {
 					console.log("关心的汽车车型")
 					console.log(res);
-
+					var html = template("js-careoftype", res);
+					$("#js-car-careoftype").html(html);
 				});
 				// 热门团购车型
 				queryAjax({ fun: "hotTuangouCar" }, function (res) {
 					console.log("热门团购车型")
 					console.log(res);
+					$(".data-car > div > span").html(res.time + "月");
+
+					var carArr = [];
+					for (var i = 0; i < 5; i++) {
+						var car = {};
+						car.type = res.cartype[i];
+						car.num = res.num[i];
+						carArr.push(car);
+					}
+					var html = template("js-hottuangou", { list: carArr });
+					$("#js-car-hottuangou").html(html);
+
 				});
-				//全市车牌拍卖人数趋势与访问国拍网人数趋势
+				// 全市车牌拍卖人数趋势与访问国拍网人数趋势
 				queryAjax({ fun: "paipaiTrend" }, function (res) {
 					console.log("全市车牌拍卖人数趋势与访问国拍网人数趋势");
 					console.log(res);
@@ -101,14 +116,14 @@ var clickEffect = {
 							trigger: 'axis'
 						},
 						legend: {
-							data: ['意向', '预购', '成交']
+							data: ['访问国拍网人数', '拍牌人数']
 						},
 						calculable: true,
 						xAxis: [
 							{
 								type: 'category',
 								boundaryGap: false,
-								data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+								data: res.date
 							}
 						],
 						yAxis: [
@@ -118,25 +133,18 @@ var clickEffect = {
 						],
 						series: [
 							{
-								name: '成交',
+								name: '访问国拍网人数',
 								type: 'line',
 								smooth: true,
 								itemStyle: { normal: { areaStyle: { type: 'default' } } },
-								data: [10, 12, 21, 54, 260, 830, 710]
+								data: res.visit
 							},
 							{
-								name: '预购',
+								name: '拍牌人数',
 								type: 'line',
 								smooth: true,
 								itemStyle: { normal: { areaStyle: { type: 'default' } } },
-								data: [30, 182, 434, 791, 390, 30, 10]
-							},
-							{
-								name: '意向',
-								type: 'line',
-								smooth: true,
-								itemStyle: { normal: { areaStyle: { type: 'default' } } },
-								data: [1320, 1132, 601, 234, 120, 90, 20]
+								data: res.auction
 							}
 						]
 					};

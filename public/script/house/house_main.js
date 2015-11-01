@@ -87,6 +87,8 @@ function House_SetAllCityInfo_screen_a(map) {
       newHouse.marker = new BMap.Marker(newHouse.point);
       map.addOverlay(newHouse.marker);
       newHouse.marker.setAnimation(BMAP_ANIMATION_BOUNCE);
+      newHouse.label = new BMap.Label(res.newhouse.villagename);
+      newHouse.marker.setLabel(newHouse.label);
       pointArr.push(newHouse.point);
     }
     if (res.secondhandhouse.villagename) {
@@ -94,6 +96,8 @@ function House_SetAllCityInfo_screen_a(map) {
       secondHandHouse.marker = new BMap.Marker(secondHandHouse.point);
       map.addOverlay(secondHandHouse.marker);
       secondHandHouse.marker.setAnimation(BMAP_ANIMATION_BOUNCE);
+      secondHandHouse.label = new BMap.Label(res.secondhandhouse.villagename);
+      secondHandHouse.marker.setLabel(secondHandHouse.label);
       pointArr.push(secondHandHouse.point);
     }
     if (res.officebuilding.villagename) {
@@ -101,6 +105,8 @@ function House_SetAllCityInfo_screen_a(map) {
       officeBuilding.marker = new BMap.Marker(officeBuilding.point);
       map.addOverlay(officeBuilding.marker);
       officeBuilding.marker.setAnimation(BMAP_ANIMATION_BOUNCE);
+      officeBuilding.label = new BMap.Label(res.officebuilding.villagename);
+      officeBuilding.marker.setLabel(officeBuilding.label);
       pointArr.push(officeBuilding.point);
     }
     if (res.shop.villagename) {
@@ -108,6 +114,8 @@ function House_SetAllCityInfo_screen_a(map) {
       shop.marker = new BMap.Marker(shop.point);
       map.addOverlay(shop.marker);
       shop.marker.setAnimation(BMAP_ANIMATION_BOUNCE);
+      shop.label = new BMap.Label(res.shop.villagename);
+      shop.marker.setLabel(shop.label);
       pointArr.push(shop.point);
     }
     if (res.tenementalhouse.villagename) {
@@ -115,6 +123,8 @@ function House_SetAllCityInfo_screen_a(map) {
       tenementtalHouse.marker = new BMap.Marker(tenementtalHouse.point);
       map.addOverlay(tenementtalHouse.marker);
       tenementtalHouse.marker.setAnimation(BMAP_ANIMATION_BOUNCE);
+      tenementtalHouse.label = new BMap.Label(res.tenementalhouse.villagename);
+      tenementtalHouse.marker.setLabel(tenementtalHouse.label);
       pointArr.push(tenementtalHouse.point);
     }
     //调整地图视野
@@ -193,6 +203,8 @@ var House_SetAreaInfo_screen_a = function (cityname, map) {
         villageArr[i].marker = new BMap.Marker(villageArr[i].point);
         map.addOverlay(villageArr[i].marker);
         villageArr[i].marker.setAnimation(BMAP_ANIMATION_BOUNCE);
+        var label = new BMap.Label(villageArr[i].villagename);
+        villageArr[i].marker.setLabel(label);
       }
     })
   };
