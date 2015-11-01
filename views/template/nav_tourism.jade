@@ -1,3 +1,8 @@
-nav.date.active
-    a.time.active(name= '' date='2015-10-01') 10月1日
-    a.time(name= '' date='2015-10-15') 10月15日
+nav.date.active#js-travel-date
+    // a.time.active(name= '' date='2015-10-01') 10月1日
+    // a.time(name= '' date='2015-10-15') 10月15日
+    | <script id="js-date" type="text/html">
+    |     {{each list as value i}}
+    |         <a class="time" data-date="{{value}}">{{value | dateFormat}}</a>
+    |     {{/each}}
+    | </script>

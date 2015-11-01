@@ -9,6 +9,7 @@
   "dependencies": {
     "artTemplate": "https://github.com/aui/artTemplate.git#~3.0.1",
     "request": "~2.65.1",
-    "jquery": "~2.1.4"
+    "jquery": "~2.1.4",
+    "moment": "~2.10.6"
   }
 }

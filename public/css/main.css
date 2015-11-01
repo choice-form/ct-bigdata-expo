@@ -105,11 +105,12 @@ nav.active {
 }
 .e-chart {
   position: absolute;
-  background-color: blue;
 }
 #chartHouse_A {
   width: 100%;
   height: 100%;
+  padding-top: 5%;
+  padding-bottom: 1%;
 }
 #chartHouse_B {
   margin-top: 12px;
@@ -120,19 +121,26 @@ nav.active {
   margin-top: 12px;
   width: 100%;
   height: 357px;
+  padding: 3%;
 }
 #chartHouse_D {
   margin-top: 12px;
   width: 100%;
   height: 225px;
+  padding-top: 3%;
+  padding-bottom: 3%;
 }
 #chartTourism_A,
 #chartTourism_B,
 #chartTourism_C,
-#chartTourism_D,
+#chartTourism_D {
+  width: 100%;
+  height: 100%;
+}
 #chartTourism_E {
   width: 100%;
   height: 100%;
+  padding: 15% 0 15% 0;
 }
 #chartCar_A,
 #chartCar_B {
@@ -264,7 +272,7 @@ p {
   background-color: #39435e;
 }
 .screen-r.map {
-  background-color: red;
+  background-color: #39435e;
 }
 .title {
   padding: 5px 8px;
@@ -789,7 +797,6 @@ table tr.active td:nth-child(2) {
   width: 45%;
   height: 516px;
   margin-right: 12px;
-  background-color: blue;
 }
 .screen-r-a > .title {
   margin: 12px 0;
@@ -831,7 +838,6 @@ table tr.active td:nth-child(2) {
   margin: 0 12px 0 0;
   height: 516px;
   width: 39%;
-  background-color: blue;
 }
 .screen-r-b > ul {
   height: 516px;
