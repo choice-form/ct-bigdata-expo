@@ -184,6 +184,7 @@ body {
   font-family: 'Helvetica Neue', Helvetica, Arial, 'Lantinghei SC', 'Hiragino Sans GB', STHeiti, 'Noto Sans S Chinese', 'Microsoft Yahei', 'Microsoft Sans Serif', 'WenQuanYi Micro Hei', sans-serif;
   min-height: 100%;
   margin: 0;
+  overflow: hidden;
 }
 body,
 input,
