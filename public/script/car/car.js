@@ -44,7 +44,8 @@ function getvillageCarInfo(item) {
 		console.log("小区的车型信息");
 		console.log(res);
 		//
-		var html = template("js-hotkeyword",{list:res.soufangkeyword.split(",")});
+		poplab.addClass("active");
+		var html = template("js-hotkeyword", { list: res.soufangkeyword.split(",") });
 		$(".popup_ca_content").html(html);
 	})
 }
@@ -192,6 +193,31 @@ var clickEffect = {
 					var html = template("js-village-rank", { list: result });
 					document.getElementById("js-car-village-rank").innerHTML = html;
 
+					// 地图显示小区坐标
+					map.clearOverlays();
+					async.map(result, getVillage, function (err, res) {
+						console.log(res);
+						villageArr = res;
+						map.clearOverlays();
+						for (var i = 0; i < villageArr.length; i++) {
+							villageArr[i].point = new BMap.Point(villageArr[i].villagecentlngb, villageArr[i].villagecentlatb);
+							villageArr[i].marker = new BMap.Marker(villageArr[i].point);
+							map.addOverlay(villageArr[i].marker);
+							villageArr[i].marker.setAnimation(BMAP_ANIMATION_BOUNCE);
+							var label = new BMap.Label(villageArr[i].villagename);
+							villageArr[i].marker.setLabel(label);
+
+							(function (village, i) {
+								// villageArr[i].marker.
+								villageArr[i].marker.addEventListener("click", function (e) {
+									// console.log(e);
+									console.log(village);
+									getvillageCarInfo(village);
+								})
+							})(villageArr[i], i)
+						}
+					})
+
 					$("#js-car-village-rank tr").on("click", function () {
 						var villagecode = $(this).attr("data-id");
 						console.log(villagecode);
@@ -268,8 +294,7 @@ var clickEffect = {
 		});
 	},
 
-  removePopupcar : function(){
-    poplab.removeClass("active");
-  },
+	removePopupcar: function () {
+		poplab.removeClass("active");
+	},
 }
-
