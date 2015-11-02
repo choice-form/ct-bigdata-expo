@@ -112,7 +112,7 @@ var realty = {
 			case "realtyInfo":
 				// result = require('../models/realty/realtyInfo');
 				// callback(null, result);
-				q = url + "realtyinfo" + "?" + "name=" + encodeURI(data.administrativearea);
+				q = url + "realtyinfo" + "?" + "code=" + encodeURI(data.villagecode);
 				request.get(q, function (err, res, body) {
 					if (err) {
 						callback(err);

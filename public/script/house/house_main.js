@@ -7,6 +7,10 @@ var House_addresstext;//市区
 
 var villageArr = [];
 
+//弹出层
+var poplab = $(".screen_popup_house");
+poplab.removeClass("active");
+
 var questAjax = function (data, callback) {
   $.ajax({
     url: "/realty",
@@ -22,6 +26,16 @@ var questAjax = function (data, callback) {
       callback(res.result);
     }
   })
+}
+
+//显示弹出层
+function showPopLab(item) {
+  console.log(item);
+  questAjax({fun:"realtyInfo",villagecode:item.villagecode},function(res){
+    console.log(res);
+  })
+  poplab.addClass("active");
+  
 }
 
 //设置房产全市信息数据
@@ -87,8 +101,12 @@ function House_SetAllCityInfo_screen_a(map) {
       newHouse.marker = new BMap.Marker(newHouse.point);
       map.addOverlay(newHouse.marker);
       newHouse.marker.setAnimation(BMAP_ANIMATION_BOUNCE);
-      newHouse.label = new BMap.Label(res.newhouse.villagename);
+      newHouse.label = new BMap.Label(res.newhouse.villagename, { offset: new BMap.Size(20, -10) });
       newHouse.marker.setLabel(newHouse.label);
+      //添加侦听
+      newHouse.marker.addEventListener("click", function(){
+        showPopLab(res.newhouse)
+      });
       pointArr.push(newHouse.point);
     }
     if (res.secondhandhouse.villagename) {
@@ -96,8 +114,12 @@ function House_SetAllCityInfo_screen_a(map) {
       secondHandHouse.marker = new BMap.Marker(secondHandHouse.point);
       map.addOverlay(secondHandHouse.marker);
       secondHandHouse.marker.setAnimation(BMAP_ANIMATION_BOUNCE);
-      secondHandHouse.label = new BMap.Label(res.secondhandhouse.villagename);
+      secondHandHouse.label = new BMap.Label(res.secondhandhouse.villagename, { offset: new BMap.Size(20, -10) });
       secondHandHouse.marker.setLabel(secondHandHouse.label);
+      //添加侦听
+      secondHandHouse.marker.addEventListener("click", function(){
+        showPopLab(res.secondhandhouse)
+      });
       pointArr.push(secondHandHouse.point);
     }
     if (res.officebuilding.villagename) {
@@ -105,8 +127,12 @@ function House_SetAllCityInfo_screen_a(map) {
       officeBuilding.marker = new BMap.Marker(officeBuilding.point);
       map.addOverlay(officeBuilding.marker);
       officeBuilding.marker.setAnimation(BMAP_ANIMATION_BOUNCE);
-      officeBuilding.label = new BMap.Label(res.officebuilding.villagename);
+      officeBuilding.label = new BMap.Label(res.officebuilding.villagename, { offset: new BMap.Size(20, -10) });
       officeBuilding.marker.setLabel(officeBuilding.label);
+      //添加侦听
+      officeBuilding.marker.addEventListener("click", function(){
+        showPopLab(res.officebuilding)
+      });
       pointArr.push(officeBuilding.point);
     }
     if (res.shop.villagename) {
@@ -114,8 +140,12 @@ function House_SetAllCityInfo_screen_a(map) {
       shop.marker = new BMap.Marker(shop.point);
       map.addOverlay(shop.marker);
       shop.marker.setAnimation(BMAP_ANIMATION_BOUNCE);
-      shop.label = new BMap.Label(res.shop.villagename);
+      shop.label = new BMap.Label(res.shop.villagename, { offset: new BMap.Size(20, -10) });
       shop.marker.setLabel(shop.label);
+      //添加侦听
+      shop.marker.addEventListener("click", function(){
+        showPopLab(res.shop)
+      });
       pointArr.push(shop.point);
     }
     if (res.tenementalhouse.villagename) {
@@ -123,8 +153,12 @@ function House_SetAllCityInfo_screen_a(map) {
       tenementtalHouse.marker = new BMap.Marker(tenementtalHouse.point);
       map.addOverlay(tenementtalHouse.marker);
       tenementtalHouse.marker.setAnimation(BMAP_ANIMATION_BOUNCE);
-      tenementtalHouse.label = new BMap.Label(res.tenementalhouse.villagename);
+      tenementtalHouse.label = new BMap.Label(res.tenementalhouse.villagename, { offset: new BMap.Size(20, -10) });
       tenementtalHouse.marker.setLabel(tenementtalHouse.label);
+      //添加侦听
+      tenementtalHouse.marker.addEventListener("click", function(){
+        showPopLab(res.tenementalhouse)
+      });
       pointArr.push(tenementtalHouse.point);
     }
     //调整地图视野
@@ -205,6 +239,9 @@ var House_SetAreaInfo_screen_a = function (cityname, map) {
         villageArr[i].marker.setAnimation(BMAP_ANIMATION_BOUNCE);
         var label = new BMap.Label(villageArr[i].villagename);
         villageArr[i].marker.setLabel(label);
+        villageArr[i].marker.addEventListener("click",function(){
+          showPopLab(villageArr[i]);
+        })
       }
     })
   };
@@ -388,6 +425,14 @@ var clickEffect = {
 
 
 $(document).ready(function () {
+  
+  //弹出层
+  $(".popup_background").on("click", function () {
+    poplab.removeClass("active");
+  })
+  $(".popup_house_content").on("click",function(){
+    poplab.removeClass("active");
+  })
 
   var map = new BMap.Map("map");
   map.centerAndZoom("上海", 11);

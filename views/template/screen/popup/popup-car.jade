@@ -4,34 +4,19 @@
       p 长宁区-宣化小区
       p 小区内汽车搜索关键字
     .popup_ca_content
-      ul
-        li
-          span 1
-          p 油电混合
-        li
-          span 2
-          p 保时捷
-        li
-          span 3
-          p 沃尔沃
-        li
-          span 4
-          p 汽车保养
-        li
-          span 5
-          p 油电混合
-        li
-          span 6
-          p 油电混合
-        li
-          span 7
-          p 油电混合
-        li
-          span 8
-          p 油电混合
-        li
-          span 9
-          p 油电混合
-        li
-          span 10
-          p 油电混合
+      | <script id="js-hotkeyword" type="text/html">
+      | {{each list as value i}}
+      | ul
+      | li
+      | span {{i+1}}
+      | p {{value.}}
+      | {{/each}}
+      | </script>
+      // ul
+      //   li
+      //     span 1
+      //     p 油电混合
+      //   li
+      //     span 2
+      //     p 保时捷
+       

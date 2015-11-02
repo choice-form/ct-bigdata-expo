@@ -1,4 +1,5 @@
 /* global template */
+var villageArr = [];
 $(function () {
 
 	var map = new BMap.Map("map");
@@ -65,6 +66,10 @@ var clickEffect = {
 							villageArr[i].marker.setAnimation(BMAP_ANIMATION_BOUNCE);
 							var label = new BMap.Label(villageArr[i].villagename);
 							villageArr[i].marker.setLabel(label);
+							villageArr[i].marker.addEventListener("click", function (e) {
+								console.log(e);
+								console.log(villageArr[i]);
+							})
 						}
 					})
 				})

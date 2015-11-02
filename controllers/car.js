@@ -51,7 +51,7 @@ var car = {
 			case "guopaiInfo":
 				// result = require('../models/car/guopaiInfo');
 				// callback(null, result);
-				q = url + "careofcarrank" + "?" + "name=" + encodeURI(data.administrativearea);
+				q = url + "guopaiinfo" + "?";
 				request.get(q, function (err, res, body) {
 					if (err) {
 						callback(err);
