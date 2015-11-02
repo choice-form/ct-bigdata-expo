@@ -145,7 +145,8 @@ nav.active {
 #chartCar_A,
 #chartCar_B {
   width: 100%;
-  height: 242px;
+  height: 90%;
+  padding: 10% 0;
 }
 #chartCar_C {
   width: 100%;
@@ -661,14 +662,14 @@ table tr.active td:nth-child(2) {
   top: 16px;
   bottom: 0;
   left: 12px;
-  width: 30%;
+  width: 25%;
 }
 .whole > .chart:nth-child(1) div > ul > li {
   background-color: #52bbb9;
   font-size: 1rem;
   display: block;
   margin-bottom: .5rem;
-  padding: .7rem;
+  padding: .45rem;
   text-align: center;
   width: 50%;
 }
@@ -681,8 +682,8 @@ table tr.active td:nth-child(2) {
 .whole > .chart:nth-child(2) {
   top: 16px;
   right: 12px;
-  width: 66%;
-  height: 279px;
+  width: 71%;
+  height: 100%;
 }
 .whole > .chart:nth-child(3) {
   right: 12px;
@@ -800,6 +801,15 @@ table tr.active td:nth-child(2) {
 }
 #car .none {
   display: none;
+}
+#js-car-careoftype > p,
+#js-car-hottuangou > p {
+  font-size: 1rem;
+  line-height: 1.2rem;
+  margin-bottom: 6px;
+  padding: 5px;
+  color: #9dcc3b;
+  background-color: #1d2134;
 }
 .screen-r-a > .title {
   margin: 12px 0;
@@ -1005,6 +1015,7 @@ table tr.active td:nth-child(2) {
   margin-top: 6px;
   padding-left: 48px;
   position: relative;
+  min-height: 26px;
 }
 .screen_popup_car > .data-car > .popup_ca_content > ul > li:first-of-type {
   margin-top: 0;
@@ -1038,6 +1049,7 @@ table tr.active td:nth-child(2) {
   border-radius: 2px;
 }
 .screen_popup_car > .data-car > .popup_ca_content > ul > li > p {
+  min-height: 26px;
   margin-left: 4px;
   padding-left: 24px;
   text-overflow: ellipsis;
