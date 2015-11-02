@@ -38,6 +38,7 @@ i {
   width: 1920px;
   height: 1080px;
   margin: auto;
+  overflow: hidden;
 }
 header {
   position: absolute;
@@ -78,7 +79,7 @@ header > h1 {
 nav {
   position: absolute;
   z-index: 10;
-  top: 44px;
+  top: 48px;
   bottom: 0;
   left: 0;
   display: none;
