@@ -36,6 +36,7 @@ function showPopLab(item) {
   questAjax({ fun: "realtyInfo", villagecode: item.villagecode }, function (res) {
     poplab.addClass("active");
     console.log(res);
+    $(".popup_house_title").html(item.villagename);
     var html = template("js-realtyinfo-type", { list: res });
     $(".popup_house_list").html(html);
     var html1 = template("js-realtyinfo-body", { list: res });
@@ -43,7 +44,6 @@ function showPopLab(item) {
     $(".popup_house_content ul>li:eq(0)").addClass("active");
     $(".popup_house_list ul>li:eq(0)").addClass("active");
     clickEffect.popupContentSwitch();
-
   })
 
 }
@@ -262,7 +262,11 @@ var House_SetAreaInfo_screen_a = function (cityname, map) {
     administrativearea: function () {
       if (cityname === "全市") {
         return "all";
-      } else {
+      } else if (cityname === "崇明") {
+        return "崇明县"
+      } else if (cityname === "浦东") {
+        return "浦东新区"
+      }else {
         return cityname + "区";
       }
     } ()
@@ -283,7 +287,16 @@ var House_SetAreaInfo_screen_b = function (realtyId) {
     //设置小区标题
     var townName = info.villagename;
     console.log(townName);
-    $('#house #districttext').text(House_addresstext + '区 -' + townName);
+    var name = (function () {
+      if (House_addresstext === "崇明") {
+        return "崇明县";
+      } else if (House_addresstext === "浦东") {
+        return "浦东新区";
+      } else {
+        return House_addresstext + "区";
+      }
+    })()
+    $('#house #districttext').text(name + ' -' + townName);
 
     //设置小区户数
     var familyNum = info.femalenum + info.malenum + info.unknownnum;
@@ -433,17 +446,17 @@ var clickEffect = {
     })
   },
 
-  removePopuphouse : function(){
+  removePopuphouse: function () {
     poplab.removeClass("active");
   },
 
-  popupContentSwitch : function(){
-    $('.popup_house_list >ul >li').click(function(){
+  popupContentSwitch: function () {
+    $('.popup_house_list >ul >li').click(function () {
       $('.popup_house_list >ul >li').removeClass('active');
       $(this).addClass('active');
       var idname = $(this).attr('name');
       $('.popup_house_content >ul >li').removeClass('active');
-      $("#"+idname).addClass('active');
+      $("#" + idname).addClass('active');
     })
   }
 
@@ -453,13 +466,13 @@ var clickEffect = {
 
 $(document).ready(function () {
 
-/*  //弹出层
-  $(".popup_background").on("click", function () {
-    poplab.removeClass("active");
-  })
-  $(".popup_house_content").on("click", function () {
-    poplab.removeClass("active");
-  })*/
+  /*  //弹出层
+    $(".popup_background").on("click", function () {
+      poplab.removeClass("active");
+    })
+    $(".popup_house_content").on("click", function () {
+      poplab.removeClass("active");
+    })*/
 
   var map = new BMap.Map("map");
   map.centerAndZoom("上海", 11);

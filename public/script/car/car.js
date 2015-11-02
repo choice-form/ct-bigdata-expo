@@ -1,4 +1,5 @@
 /* global template */
+
 var villageArr = [];
 
 //弹出层
@@ -44,6 +45,7 @@ function getvillageCarInfo(item) {
 		console.log("小区的车型信息");
 		console.log(res);
 		//
+		$(".popup_car_title > p:eq(0)").html(item.villagename);
 		poplab.addClass("active");
 		var html = template("js-hotkeyword", { list: res.soufangkeyword.split(",") });
 		$(".popup_ca_content").html(html);
@@ -185,7 +187,16 @@ var clickEffect = {
 				// 小区排名
 				data = {
 					fun: "careOfCarRank",
-					administrativearea: addresstext + "区",
+					administrativearea: function () {
+						if (addresstext === "崇明") {
+							return "崇明县"
+						} else if (addresstext === "浦东") {
+							return "浦东新区"
+						} else {
+							return addresstext + "区";
+						}
+					} ()
+					// addresstext + "区",
 				};
 				queryAjax(data, function (result) {
 					console.log(addresstext + "区" + "关系汽车的小区排名")
