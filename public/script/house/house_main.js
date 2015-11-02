@@ -31,11 +31,16 @@ var questAjax = function (data, callback) {
 //显示弹出层
 function showPopLab(item) {
   console.log(item);
-  questAjax({fun:"realtyInfo",villagecode:item.villagecode},function(res){
+  questAjax({ fun: "realtyInfo", villagecode: item.villagecode }, function (res) {
+    poplab.addClass("active");
     console.log(res);
+    var html = template("js-realtyinfo-type", { list: res });
+    $(".popup_house_list").html(html);
+    var html1 = template("js-realtyinfo-body", { list: res });
+    $(".popup_house_content").html(html1);
+    $(".popup_house_content ul>li:eq(0)").addClass("active");
   })
-  poplab.addClass("active");
-  
+
 }
 
 //设置房产全市信息数据
@@ -104,7 +109,7 @@ function House_SetAllCityInfo_screen_a(map) {
       newHouse.label = new BMap.Label(res.newhouse.villagename, { offset: new BMap.Size(20, -10) });
       newHouse.marker.setLabel(newHouse.label);
       //添加侦听
-      newHouse.marker.addEventListener("click", function(){
+      newHouse.marker.addEventListener("click", function () {
         showPopLab(res.newhouse)
       });
       pointArr.push(newHouse.point);
@@ -117,7 +122,7 @@ function House_SetAllCityInfo_screen_a(map) {
       secondHandHouse.label = new BMap.Label(res.secondhandhouse.villagename, { offset: new BMap.Size(20, -10) });
       secondHandHouse.marker.setLabel(secondHandHouse.label);
       //添加侦听
-      secondHandHouse.marker.addEventListener("click", function(){
+      secondHandHouse.marker.addEventListener("click", function () {
         showPopLab(res.secondhandhouse)
       });
       pointArr.push(secondHandHouse.point);
@@ -130,7 +135,7 @@ function House_SetAllCityInfo_screen_a(map) {
       officeBuilding.label = new BMap.Label(res.officebuilding.villagename, { offset: new BMap.Size(20, -10) });
       officeBuilding.marker.setLabel(officeBuilding.label);
       //添加侦听
-      officeBuilding.marker.addEventListener("click", function(){
+      officeBuilding.marker.addEventListener("click", function () {
         showPopLab(res.officebuilding)
       });
       pointArr.push(officeBuilding.point);
@@ -143,7 +148,7 @@ function House_SetAllCityInfo_screen_a(map) {
       shop.label = new BMap.Label(res.shop.villagename, { offset: new BMap.Size(20, -10) });
       shop.marker.setLabel(shop.label);
       //添加侦听
-      shop.marker.addEventListener("click", function(){
+      shop.marker.addEventListener("click", function () {
         showPopLab(res.shop)
       });
       pointArr.push(shop.point);
@@ -156,7 +161,7 @@ function House_SetAllCityInfo_screen_a(map) {
       tenementtalHouse.label = new BMap.Label(res.tenementalhouse.villagename, { offset: new BMap.Size(20, -10) });
       tenementtalHouse.marker.setLabel(tenementtalHouse.label);
       //添加侦听
-      tenementtalHouse.marker.addEventListener("click", function(){
+      tenementtalHouse.marker.addEventListener("click", function () {
         showPopLab(res.tenementalhouse)
       });
       pointArr.push(tenementtalHouse.point);
@@ -239,7 +244,7 @@ var House_SetAreaInfo_screen_a = function (cityname, map) {
         villageArr[i].marker.setAnimation(BMAP_ANIMATION_BOUNCE);
         var label = new BMap.Label(villageArr[i].villagename);
         villageArr[i].marker.setLabel(label);
-        villageArr[i].marker.addEventListener("click",function(){
+        villageArr[i].marker.addEventListener("click", function () {
           showPopLab(villageArr[i]);
         })
       }
@@ -430,7 +435,7 @@ $(document).ready(function () {
   $(".popup_background").on("click", function () {
     poplab.removeClass("active");
   })
-  $(".popup_house_content").on("click",function(){
+  $(".popup_house_content").on("click", function () {
     poplab.removeClass("active");
   })
 

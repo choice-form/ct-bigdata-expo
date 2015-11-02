@@ -3,70 +3,68 @@
   .data-house
     .popup_house_title 居委会名称&小区名称
     .popup_house_list
-      // | <script id="js-realtyinfo-type" type="text/html">
-      // |  <ul>
-      // |    {{each list as value i}}
-      // |      <li>{{value.type}}</li>
-      // |    {{/each}}
-      // |  </ul>
-      // | </script>
-      ul
-        li.active 新房指标
-        li 二手房指标
-        li 出租房指标
-        li 写字楼指标
-        li 商铺指标
+      | <script id="js-realtyinfo-type" type="text/html">
+      |  <ul>
+      |    {{each list as value i}}
+      |      <li>{{value.type}}</li>
+      |    {{/each}}
+      |  </ul>
+      | </script>
+      // ul
+      //   li.active 新房指标
+      //   li 二手房指标
+      //   li 出租房指标
+      //   li 写字楼指标
+      //   li 商铺指标
     .popup_house_content
-      // | <script id="js-realtyinfo-body" type="text/html">
-      // | ul
-      // | mixin list(name,active)
-      // | li(class= active)
-      // | div
-      // | span= name + "数量"
-      // | h1 {{value.num}}
-      // | span 套;
-      // | div
-      // | span= name + "总面积"
-      // | h1 {{value.area}}
-      // | span 平方米;
-      // | div
-      // | span= name + "平均价格"
-      // | h1 {{value.averageprice}}
-      // | span 套;
-      // | div
-      // | span= name + "平均面积"
-      // | h1 {{value.areaagearea}}
-      // | span 平方米;
-      // | +list("新房","active")
-      // | +list("二手房")
-      // | +list("&#20986;&#31199;&#25151;")
-      // | +list("&#20889;&#23383;&#27004;")
-      // | +list("&#21830;&#38138;")
-      // | </script>
-      ul
-        mixin list(name,active)
-          li(class= active)
-            div
-              span= name + "数量"
-              h1 6272
-                span 套
-            div
-              span= name + "总面积"
-              h1 6272
-                span 平方米
-            div
-              span= name + "平均价格"
-              h1 6272
-                span 元
-            div
-              span= name + "平均面积"
-              h1 6272
-                span 平方米
-        +list('新房','active')
-        +list('二手房')
-        +list('出租房')
-        +list('写字楼')
-        +list('商铺')
+      | <script id="js-realtyinfo-body" type="text/html">
+      | <ul>
+      | {{each list as value }}
+      | <li>
+      | <div>
+      | <span>数量</span>
+      | <h1>{{value.num}}<span>套</span></h1>
+      | </div>
+      | <div>
+      | <span>总面积</span>
+      | <h1>{{value.area}}<span>平方米</span></h1>
+      | </div>
+      | <div>
+      | <span>平均价格</span>
+      | <h1>{{value.averageprice}}<span>元</span></h1>
+      | </div>
+      | <div>
+      | <span>平均面积</span>
+      | <h1>{{value.averagearea}}<span>平方米</span></h1>
+      | </div>
+      | </li>
+      | {{/each}}
+      | </ul>
+      | </script>
+      // ul
+      //   mixin list(name,active)
+      //     li(class= active)
+      //       div
+      //         span= name + "数量"
+      //         h1 6272
+      //           span 套
+      //       div
+      //         span= name + "总面积"
+      //         h1 6272
+      //           span 平方米
+      //       div
+      //         span= name + "平均价格"
+      //         h1 6272
+      //           span 元
+      //       div
+      //         span= name + "平均面积"
+      //         h1 6272
+      //           span 平方米
+      //   +list('新房','active')
+      //   +list('二手房')
+      //   +list('出租房')
+      //   +list('写字楼')
+      //   +list('商铺')
 
 
 
