@@ -34,6 +34,18 @@ function getVillage(item, cb) {
 	})
 }
 
+// 小区的车型信息
+function getvillageCarInfo(item) {
+	queryAjax({ fun: "villageCarInfo", villagecode: item.villagecode }, function (res) {
+		console.log("小区的车型信息");
+		console.log(res);
+		// 
+		var html = template("js-hotkeyword",{list:res.soufangkeyword.split(",")});
+		$(".popup_ca_content").html(html);
+	})
+}
+
+
 var clickEffect = {
 	district: function (map) {
 		$('.district').click(function () {
@@ -66,11 +78,15 @@ var clickEffect = {
 							villageArr[i].marker.setAnimation(BMAP_ANIMATION_BOUNCE);
 							var label = new BMap.Label(villageArr[i].villagename);
 							villageArr[i].marker.setLabel(label);
-							villageArr[i].marker.
-							villageArr[i].marker.addEventListener("click", function (e) {
-								console.log(e);
-								console.log(villageArr[i]);
-							})
+
+							(function (village, i) {
+								// villageArr[i].marker.
+								villageArr[i].marker.addEventListener("click", function (e) {
+									// console.log(e);
+									console.log(village);
+									getvillageCarInfo(village);
+								})
+							})(villageArr[i], i)
 						}
 					})
 				})

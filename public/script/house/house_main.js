@@ -244,9 +244,11 @@ var House_SetAreaInfo_screen_a = function (cityname, map) {
         villageArr[i].marker.setAnimation(BMAP_ANIMATION_BOUNCE);
         var label = new BMap.Label(villageArr[i].villagename);
         villageArr[i].marker.setLabel(label);
-        villageArr[i].marker.addEventListener("click", function () {
-          showPopLab(villageArr[i]);
-        })
+        (function (village, i) {
+          villageArr[i].marker.addEventListener("click", function () {
+            showPopLab(village);
+          })
+        })(villageArr[i], i)
       }
     })
   };

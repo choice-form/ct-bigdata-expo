@@ -5,12 +5,14 @@
       p 小区内汽车搜索关键字
     .popup_ca_content
       | <script id="js-hotkeyword" type="text/html">
+      | <ul>
       | {{each list as value i}}
-      | ul
-      | li
-      | span {{i+1}}
-      | p {{value.}}
+      | <li>
+      | <span> {{i+1}} </span>
+      | <p> {{value}} </p>
+      | </li>
       | {{/each}}
+      | </ul>
       | </script>
       // ul
       //   li

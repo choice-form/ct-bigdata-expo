@@ -8,20 +8,20 @@ var router = express.Router();
 /* GET home page. */
 // get 房产、汽车页面
 router.get('/', function (req, res) {
-  res.render('main_house', { title: '上海电信大数据区域洞察信息展示' });
+  res.render('main_house', { title: '上海电信大数据区域洞察信息展示 Shanghai Telecom Big Data Area Insight Information Display' });
 });
 
 // get 旅游页面
 router.get('/realty', function (req, res) {
-  res.render('main_house', { title: '房产' });
+  res.render('main_house', { title: '上海电信大数据区域洞察信息展示 Shanghai Telecom Big Data Area Insight Information Display' });
 });
 
 router.get('/travel', function (req, res) {
-  res.render('main_tourism', { title: '旅游' });
+  res.render('main_tourism', { title: '上海电信大数据区域洞察信息展示 Shanghai Telecom Big Data Area Insight Information Display' });
 });
 
 router.get('/car', function (req, res) {
-  res.render('main_car', { title: '汽车' });
+  res.render('main_car', { title: '上海电信大数据区域洞察信息展示 Shanghai Telecom Big Data Area Insight Information Display' });
 });
 
 // post 旅游
