@@ -1,12 +1,12 @@
 .screen_popup_house
-  .popup_background
+  .popup_house_background(onclick='clickEffect.removePopup()')
   .data-house
     .popup_house_title 居委会名称&小区名称
     .popup_house_list
       | <script id="js-realtyinfo-type" type="text/html">
       |  <ul>
       |    {{each list as value i}}
-      |      <li>{{value.type}}</li>
+      |      <li name='house_pop_con{{i}}'>{{value.type}}</li>
       |    {{/each}}
       |  </ul>
       | </script>
@@ -19,8 +19,8 @@
     .popup_house_content
       | <script id="js-realtyinfo-body" type="text/html">
       | <ul>
-      | {{each list as value }}
-      | <li>
+      | {{each list as value i}}
+      | <li id="house_pop_con{{i}}">
       | <div>
       | <span>数量</span>
       | <h1>{{value.num}}<span>套</span></h1>

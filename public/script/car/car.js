@@ -96,7 +96,7 @@ var clickEffect = {
 					console.log(res);
 					$("#careOfCarNum").html(res.peoplenum + "<span>户</span>");
 				})
-				// 车牌拍卖人数 
+				// 车牌拍卖人数
 				queryAjax({ fun: "guopaiInfo", villagecode: "all" }, function (res) {
 					console.log("车牌拍卖户数");
 					console.log(res);

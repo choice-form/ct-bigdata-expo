@@ -10,6 +10,8 @@ var villageArr = [];
 //弹出层
 var poplab = $(".screen_popup_house");
 poplab.removeClass("active");
+//弹出层的背景
+var pop_background = $(".popup_house_background");
 
 var questAjax = function (data, callback) {
   $.ajax({
@@ -39,6 +41,9 @@ function showPopLab(item) {
     var html1 = template("js-realtyinfo-body", { list: res });
     $(".popup_house_content").html(html1);
     $(".popup_house_content ul>li:eq(0)").addClass("active");
+    $(".popup_house_list ul>li:eq(0)").addClass("active");
+    clickEffect.popupContentSwitch();
+
   })
 
 }
@@ -91,7 +96,7 @@ function House_SetAllCityInfo_screen_a(map) {
   questAjax({
     fun: "totalDataCityOfHouse"
   }, setInfo);
-  
+
   // 统计全市房产类型新房、二手房、出租房、写字楼、商铺的top1 所对应的小区信息
   questAjax({ fun: "totalCityRealtyTypeTopOne" }, function (res) {
     console.log("统计全市房产类型新房、二手房、出租房、写字楼、商铺的top1 所对应的小区信息");
@@ -170,7 +175,7 @@ function House_SetAllCityInfo_screen_a(map) {
     console.log(pointArr);
     // map.setViewport(pointArr);
   })
-  
+
   // 房价最近一年趋势
   questAjax({ fun: "totalCityPriceOfHouseTrend" }, function (res) {
     console.log("房价最近一年趋势");
@@ -230,7 +235,7 @@ var House_SetAreaInfo_screen_a = function (cityname, map) {
     var code = $('#tab-1 [date-id]').eq(0).attr('date-id');
     House_SetAreaInfo_screen_b(code);
     console.log(info);
-    
+
     // 地图显示小区坐标
     map.clearOverlays();
     async.map(info, getVillage, function (err, res) {
@@ -285,7 +290,7 @@ var House_SetAreaInfo_screen_b = function (realtyId) {
     console.log(familyNum);
     $('#house .chartHouse > .chart:eq(0) > h1').html(familyNum + "<span>户</span>");
     console.log(info);
-    
+
     // 男女比例
     var propOpt = {
       tooltip: {
@@ -353,7 +358,7 @@ var House_SetAreaInfo_screen_b = function (realtyId) {
     var distChart = echarts.init(document.getElementById("chartHouse_B"));
     distChart.setTheme(myTheme);
     distChart.setOption(distOpt);
-    
+
     // 距离地铁站距离
     var undergroundOpt = {
       tooltip: {
@@ -426,20 +431,35 @@ var clickEffect = {
       console.log(code);
       House_SetAreaInfo_screen_b(code);
     })
+  },
+
+  removePopup : function(){
+    poplab.removeClass("active");
+  },
+
+  popupContentSwitch : function(){
+    $('.popup_house_list >ul >li').click(function(){
+      $('.popup_house_list >ul >li').removeClass('active');
+      $(this).addClass('active');
+      var idname = $(this).attr('name');
+      $('.popup_house_content >ul >li').removeClass('active');
+      $("#"+idname).addClass('active');
+    })
   }
+
 }
 
 
 
 $(document).ready(function () {
-  
-  //弹出层
+
+/*  //弹出层
   $(".popup_background").on("click", function () {
     poplab.removeClass("active");
   })
   $(".popup_house_content").on("click", function () {
     poplab.removeClass("active");
-  })
+  })*/
 
   var map = new BMap.Map("map");
   map.centerAndZoom("上海", 11);
