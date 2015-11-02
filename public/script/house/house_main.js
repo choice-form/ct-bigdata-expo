@@ -433,7 +433,7 @@ var clickEffect = {
     })
   },
 
-  removePopup : function(){
+  removePopuphouse : function(){
     poplab.removeClass("active");
   },
 

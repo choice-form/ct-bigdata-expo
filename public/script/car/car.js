@@ -1,5 +1,9 @@
 /* global template */
 var villageArr = [];
+
+//弹出层
+var poplab = $(".screen_popup_car");
+poplab.removeClass("active");
 $(function () {
 
 	var map = new BMap.Map("map");
@@ -39,7 +43,7 @@ function getvillageCarInfo(item) {
 	queryAjax({ fun: "villageCarInfo", villagecode: item.villagecode }, function (res) {
 		console.log("小区的车型信息");
 		console.log(res);
-		// 
+		//
 		var html = template("js-hotkeyword",{list:res.soufangkeyword.split(",")});
 		$(".popup_ca_content").html(html);
 	})
@@ -262,7 +266,10 @@ var clickEffect = {
 			$('.row').removeClass('active');
 			$(this).addClass('active');
 		});
+	},
 
-	}
+  removePopupcar : function(){
+    poplab.removeClass("active");
+  },
 }
 
