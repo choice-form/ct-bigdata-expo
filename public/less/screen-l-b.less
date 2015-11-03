@@ -13,8 +13,15 @@
   right: 0;
   bottom: 0;
   left: 70px;
-  > .title {
-    margin: 12px;
+  > #screen_b_house_chart_all {
+    width: 73%;
+    >.title {
+      margin: 12px;
+    }
+    >.chartHouse{
+      width: 73%;
+      right: 0;
+    }
   }
 }
 
@@ -312,3 +319,36 @@
     background-color: #1d2134;
   }
 }
+
+
+#house{
+  .grid-screen-b-house{
+    position: absolute;
+    top: 16px;
+    bottom: 0;
+    right: 12px;
+    width: 25%;
+    overflow: hidden;
+    text-align: center;
+    >p{
+      font-size: 1rem;
+      line-height: 1.2rem;
+      margin-bottom: 6px;
+      padding: 5px;
+      color: #9dcc3b;
+      background-color: #1d2134;
+    }
+    >ul>li{
+      background-color: #52bbb9;
+      font-size: 1rem;
+      display: block;
+      margin-bottom: .5rem;
+      padding: .45rem;
+      text-align: center;
+      width: 100%;
+    }
+  }
+}
+
+
+

@@ -1,4 +1,5 @@
 .screen_toggle.a.data-car.active.all
+  #screen_a_data_car
     .title
         p 全市汽车用户数据
         span 2014年10月 - 2015年10月
@@ -15,3 +16,31 @@
             p 访问车牌网人数
             h1#visitNum 3249345
                 span 万
+  #js-car-careoftype
+  | <script id="js-careoftype" type="text/html">
+  |    <p>关心的汽车车型户数</p>
+  |    <ul>
+  |    <li>电动车</li>
+  |    <li>{{eleccarnum}}</li>
+  |    </ul>
+  |    <ul>
+  |    <li>高端车</li>
+  |    <li>{{highgradecarnum}}</li>
+  |   </ul>
+  |   <ul>
+  |   <li>SUV</li>
+  |   <li>{{suvcarnum}}</li>
+  |   </ul>
+  |   <ul>
+  |   <li>中小型车</li>
+  |   <li>{{normalcarnum}}</li>
+  |   </ul>
+  |   <ul>
+  |   <li>跑车</li>
+  |   <li>{{supercarnum}}</li>
+  |   </ul>
+  |   <ul>
+  |   <li>商务车</li>
+  |   <li>{{businesscarunm}}</li>
+  |   </ul>
+  | </script>

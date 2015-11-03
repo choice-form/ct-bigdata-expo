@@ -207,8 +207,17 @@ table {
         background-color: @blue3;
       }
     }
-    &:nth-child(-n+4) {
+/*    &:nth-child(-n+4) {
       background-color: fade(@blue3, 46%);
+    }*/
+    &:nth-child(2) {
+      background-color: @red;
+    }
+    &:nth-child(3) {
+      background-color: @yellow;
+    }
+    &:nth-child(4) {
+      background-color: @blue;
     }
     &:hover {
       background-color: fade(@white, 24%);
@@ -244,7 +253,13 @@ table {
   }
 }
 
-.data-car {
+#screen_a_data_car{
+  >.data-column-group{
+    width: 55%;
+    left: 0;
+  }
+}
+.data-car,#screen_a_data_car {
   > .data-column-group {
     > .data-column {
       width: 100%;
@@ -331,5 +346,29 @@ table {
         border-bottom: 1px solid #52bbb9;
       }
    }
+  }
+}
+
+#js-car-careoftype{
+  position: absolute;
+  width: 40%;
+  right: 0;
+  margin-top: 12px;
+  >ul{
+    >li{
+      background-color: #52bbb9;
+      font-size: 1rem;
+      display: block;
+      margin-bottom: .5rem;
+      padding: .45rem;
+      text-align: center;
+      width: 50%;
+      &:first-of-type{
+        float: left;
+      }
+      &:last-of-type{
+        float: right;
+      }
+    }
   }
 }
