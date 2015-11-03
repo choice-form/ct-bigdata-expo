@@ -280,7 +280,7 @@ var clickEffect = {
 											{ value: res.suvcarnum, name: 'SUV' },
 											{ value: res.normalcarnum, name: '中小型车' },
 											{ value: res.supercarnum, name: '跑车' },
-											{ value: res.businesscarnum, name: '商务车' }
+											{ value: res.businesscarunm, name: '商务车' }
 										]
 									}
 								]
