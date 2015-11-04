@@ -40,6 +40,11 @@ i {
   margin: auto;
   overflow: hidden;
 }
+.ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
 header {
   position: absolute;
   z-index: 10;
@@ -79,7 +84,7 @@ header > h1 {
 nav {
   position: absolute;
   z-index: 10;
-  top: 48px;
+  top: 44px;
   bottom: 0;
   left: 0;
   display: none;
@@ -100,6 +105,7 @@ nav > a.active {
 }
 nav#js-travel-date > p {
   width: 100%;
+  padding: 8px 0;
   background-color: aquamarine;
   text-align: center;
 }
@@ -283,13 +289,13 @@ p {
   background-color: #39435e;
 }
 .title {
+  font-size: 1.4rem;
   padding: 5px 8px;
   color: #9dcc3b;
   background-color: #1d2134;
   overflow: hidden;
 }
 .title > p {
-  font-size: 1.4rem;
   line-height: 1.4rem;
   float: left;
 }
@@ -485,13 +491,16 @@ table tr:first-child th {
   background-color: #1d2134;
 }
 table tr:nth-child(2) {
-  background-color: #ff1414;
+  color: white;
+  background-color: #C14FBD;
 }
 table tr:nth-child(3) {
-  background-color: #ffff02;
+  color: white;
+  background-color: #7F802A;
 }
 table tr:nth-child(4) {
-  background-color: rgba(4, 184, 245, 0.56);
+  color: white;
+  background-color: #4FB1C1;
 }
 table tr:hover {
   background-color: rgba(255, 255, 255, 0.24);
@@ -595,7 +604,8 @@ table tr.active td:nth-child(2) {
 #js-car-careoftype {
   position: absolute;
   width: 40%;
-  right: 0;
+  right: 12px;
+  top: 0;
   margin-top: 12px;
 }
 #js-car-careoftype > ul > li {
@@ -612,6 +622,9 @@ table tr.active td:nth-child(2) {
 }
 #js-car-careoftype > ul > li:last-of-type {
   float: right;
+}
+#screen_a_data_car > .title {
+  width: 55%;
 }
 .screenB {
   display: none;
@@ -742,7 +755,7 @@ table tr.active td:nth-child(2) {
   height: 279px;
 }
 .whole > .chart > p {
-  font-size: 1rem;
+  font-size: 1.4rem;
   line-height: 1.2rem;
   margin-bottom: 6px;
   padding: 5px;
@@ -852,40 +865,45 @@ table tr.active td:nth-child(2) {
 #car .none {
   display: none;
 }
-#js-car-careoftype > p,
 #js-car-hottuangou > p {
-  font-size: 1rem;
+  font-size: 1.4rem;
   line-height: 1.2rem;
   margin-bottom: 6px;
   padding: 5px;
   color: #9dcc3b;
   background-color: #1d2134;
 }
+#house > .screen_toggle > .title {
+  margin: 12px;
+}
 #house .grid-screen-b-house {
   position: absolute;
-  top: 16px;
+  top: 12px;
   bottom: 0;
   right: 12px;
   width: 25%;
   overflow: hidden;
   text-align: center;
 }
-#house .grid-screen-b-house > p {
-  font-size: 1rem;
-  line-height: 1.2rem;
-  margin-bottom: 6px;
-  padding: 5px;
-  color: #9dcc3b;
-  background-color: #1d2134;
-}
 #house .grid-screen-b-house > ul > li {
-  background-color: #52bbb9;
+  text-align: center;
+  display: inline-block;
   font-size: 1rem;
-  display: block;
   margin-bottom: .5rem;
   padding: .45rem;
-  text-align: center;
-  width: 100%;
+}
+#house .grid-screen-b-house > ul > li:first-of-type {
+  width: 30%;
+  float: left;
+  background-color: #ffa315;
+}
+#house .grid-screen-b-house > ul > li:last-of-type {
+  width: 70%;
+  float: right;
+  background-color: #52bbb9;
+}
+#tourism > .screen_toggle > .title {
+  margin: 12px;
 }
 .screen-r-a > .title {
   margin: 12px 0;
@@ -918,9 +936,6 @@ table tr.active td:nth-child(2) {
   margin: 12px 12px 0 0;
   width: 17%;
   float: right;
-}
-.screen-r-b > .title > p {
-  font-size: 1rem;
 }
 .screen-r-b > .chart {
   float: left;

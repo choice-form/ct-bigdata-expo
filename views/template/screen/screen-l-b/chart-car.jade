@@ -15,8 +15,9 @@
         //    p 车牌拍卖价格趋势
         //    include ../../chart/chartCar_A.jade
         .chart
+          .title
             p 车牌拍卖人数趋势与访问车牌网人数趋势
-            include ../../chart/chartCar_B.jade
+          include ../../chart/chartCar_B.jade
 
 .screen_toggle.b.dis
     .title.none
@@ -36,17 +37,19 @@
             // h1 34534
             //     span 人
         .chart
+          .title
             p 小区内关心的车型人数比例
-            include ../../chart/chartCar_C.jade
+          include ../../chart/chartCar_C.jade
         .chart
+          .title
             p 小区内关心的车辆品牌 (TOP 10)
-            .grid.grid-car-brands
-                table#js-car-careofbradntop10(width="100%" height="100%")
-                    |  <script id = "js-careofbradntop10" type="text/html">
-                    | {{each list as value i}}
-                    |  <tr>
-                    |      <td>{{i+1}}</td>
-                    |      <td>{{value}}</td>
-                    |  </tr>
-                    | {{/each}}
-                    | </script>
+          .grid.grid-car-brands
+              table#js-car-careofbradntop10(width="100%" height="100%")
+                  |  <script id = "js-careofbradntop10" type="text/html">
+                  | {{each list as value i}}
+                  |  <tr>
+                  |      <td>{{i+1}}</td>
+                  |      <td>{{value}}</td>
+                  |  </tr>
+                  | {{/each}}
+                  | </script>

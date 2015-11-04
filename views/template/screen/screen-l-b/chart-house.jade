@@ -6,18 +6,18 @@
           include ../../chart/chartHouse_A.jade
     .grid-screen-b-house
       |    <script id="js-careofhouse-1" type= "text/html">
-      |    <p>各类型房产的top1</p>
+      |    <div class='title'><p>各类型房产的top1</p></div>
       |    <ul>
-      |    <li>{{newhouse.villagename}}</li>
+      |    <li class='ellipsis'>新房</li><li class='ellipsis'>{{newhouse.villagename}}</li>
       |    </ul>
       |    <ul>
-      |    <li>{{secondhandhouse.villagename}}</li>
+      |    <li class='ellipsis'>二手房</li><li class='ellipsis'>{{secondhandhouse.villagename}}</li>
       |    </ul>
       |    <ul>
-      |    <li>{{tenementalhouse.villagename}}</li>
+      |    <li class='ellipsis'>出租房</li><li class='ellipsis'>{{tenementalhouse.villagename}}</li>
       |    </ul>
       |    <ul>
-      |    <li>{{officebuilding.villagename}}</li>
+      |    <li class='ellipsis'>商铺</li><li class='ellipsis'>{{officebuilding.villagename}}</li>
       |    </ul>
       |    </script>
 

@@ -211,12 +211,15 @@ table {
       background-color: fade(@blue3, 46%);
     }*/
     &:nth-child(2) {
+      color: white;
       background-color: @red;
     }
     &:nth-child(3) {
+      color: white;
       background-color: @yellow;
     }
     &:nth-child(4) {
+      color: white;
       background-color: @blue;
     }
     &:hover {
@@ -352,7 +355,8 @@ table {
 #js-car-careoftype{
   position: absolute;
   width: 40%;
-  right: 0;
+  right: 12px;
+  top: 0;
   margin-top: 12px;
   >ul{
     >li{
@@ -370,5 +374,11 @@ table {
         float: right;
       }
     }
+  }
+}
+
+#screen_a_data_car{
+  >.title{
+    width:55%;
   }
 }

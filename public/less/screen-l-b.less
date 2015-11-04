@@ -155,7 +155,7 @@
       height: 279px;
     }
     > p {
-      font-size: 1rem;
+      font-size: 1.4rem;
       line-height: 1.2rem;
 
       margin-bottom: 6px;
@@ -309,9 +309,9 @@
   }
 }
 
-#js-car-careoftype,#js-car-hottuangou{
+#js-car-hottuangou{
   > p {
-    font-size: 1rem;
+    font-size: 1.4rem;
     line-height: 1.2rem;
     margin-bottom: 6px;
     padding: 5px;
@@ -322,30 +322,41 @@
 
 
 #house{
+  >.screen_toggle >.title{
+    margin: 12px;
+  }
   .grid-screen-b-house{
     position: absolute;
-    top: 16px;
+    top: 12px;
     bottom: 0;
     right: 12px;
     width: 25%;
     overflow: hidden;
     text-align: center;
-    >p{
-      font-size: 1rem;
-      line-height: 1.2rem;
-      margin-bottom: 6px;
-      padding: 5px;
-      color: #9dcc3b;
-      background-color: #1d2134;
-    }
     >ul>li{
-      background-color: #52bbb9;
+      text-align: center;
+      display: inline-block;
       font-size: 1rem;
-      display: block;
       margin-bottom: .5rem;
       padding: .45rem;
-      text-align: center;
-      width: 100%;
+      &:first-of-type{
+        width: 30%;
+        float: left;
+        background-color:#ffa315;
+      }
+      &:last-of-type{
+        width: 70%;
+        float: right;
+        background-color: #52bbb9;
+      }
+    }
+  }
+}
+
+#tourism{
+  >.screen_toggle{
+    >.title{
+      margin: 12px;
     }
   }
 }
