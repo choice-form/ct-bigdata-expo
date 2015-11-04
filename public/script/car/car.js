@@ -95,6 +95,11 @@ var clickEffect = {
 								})
 							})(villageArr[i], i)
 						}
+						var pointArr = []
+						villageArr.forEach(function (item) {
+							pointArr.push(item.point);
+						})
+						map.setViewport(pointArr);
 					})
 				})
 				// 全市关心汽车的总人数
@@ -117,6 +122,9 @@ var clickEffect = {
 					console.log(res);
 					var html = template("js-careoftype", res);
 					$("#js-car-careoftype").html(html);
+					
+					// 全市汽车用户数据后的时间
+					$("#screen_a_data_car>.title>span").html(res.time+"月")
 				});
 				// 热门团购车型
 				queryAjax({ fun: "hotTuangouCar" }, function (res) {
@@ -227,6 +235,11 @@ var clickEffect = {
 								})
 							})(villageArr[i], i)
 						}
+						var pointArr = []
+						villageArr.forEach(function (item) {
+							pointArr.push(item.point);
+						})
+						map.setViewport(pointArr);
 					})
 
 					$("#js-car-village-rank tr").on("click", function () {

@@ -102,6 +102,10 @@ function House_SetAllCityInfo_screen_a(map) {
     console.log("统计全市房产类型新房、二手房、出租房、写字楼、商铺的top1 所对应的小区信息");
     console.log(res);
 
+    //各类型房产的top1
+    var html = template("js-careofhouse-1",res);
+    $(".grid-screen-b-house").html(html);
+    
     map.clearOverlays();
     // 添加各房型对应小区的坐标到地图上
     var newHouse = {}, secondHandHouse = {}, officeBuilding = {}, shop = {}, tenementtalHouse = {};
@@ -173,7 +177,7 @@ function House_SetAllCityInfo_screen_a(map) {
     }
     //调整地图视野
     console.log(pointArr);
-    // map.setViewport(pointArr);
+    map.setViewport(pointArr);
   })
 
   // 房价最近一年趋势
@@ -255,6 +259,15 @@ var House_SetAreaInfo_screen_a = function (cityname, map) {
           })
         })(villageArr[i], i)
       }
+      var pointArr = []
+      villageArr.forEach(function (item) {
+        pointArr.push(item.point);
+      })
+      map.setViewport(pointArr);
+      
+      //关心房产的小区top10
+      // var htm = template("js-careofhouse-1",);
+      // grid-screen-b-house
     })
   };
   questAjax({
@@ -266,7 +279,7 @@ var House_SetAreaInfo_screen_a = function (cityname, map) {
         return "崇明县"
       } else if (cityname === "浦东") {
         return "浦东新区"
-      }else {
+      } else {
         return cityname + "区";
       }
     } ()

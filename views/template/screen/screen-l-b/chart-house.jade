@@ -5,25 +5,21 @@
       .chartHouse.screenBchart
           include ../../chart/chartHouse_A.jade
     .grid-screen-b-house
-      |    <p>查询房产的小区</p>
+      |    <script id="js-careofhouse-1" type= "text/html">
+      |    <p>各类型房产的top1</p>
       |    <ul>
-      |    <li>某某小区1</li>
+      |    <li>{{newhouse.villagename}}</li>
       |    </ul>
       |    <ul>
-      |    <li>某某小区1</li>
-      |   </ul>
-      |   <ul>
-      |   <li>某某小区1</li>
-      |   </ul>
-      |   <ul>
-      |   <li>某某小区1</li>
-      |   </ul>
-      |   <ul>
-      |   <li>某某小区1</li>
-      |   </ul>
-      |   <ul>
-      |   <li>某某小区1</li>
-      |   </ul>
+      |    <li>{{secondhandhouse.villagename}}</li>
+      |    </ul>
+      |    <ul>
+      |    <li>{{tenementalhouse.villagename}}</li>
+      |    </ul>
+      |    <ul>
+      |    <li>{{officebuilding.villagename}}</li>
+      |    </ul>
+      |    </script>
 
 
 
