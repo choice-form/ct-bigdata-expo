@@ -122,9 +122,46 @@ var clickEffect = {
 					console.log(res);
 					var html = template("js-careoftype", res);
 					$("#js-car-careoftype").html(html);
-					
+					$("#js-car-careoftype ul>li").on('click', function () {
+						var carType = $(this).parent().attr("data-id")
+						console.log(carType);
+						queryAjax({ fun: "totalCareOfcarType", type: carType }, function (res) {
+							console.log(res);
+							async.map(res, getVillage, function (err, data) {
+								if (err) {
+									throw Error(err);
+									return;
+								}
+								console.log(data);
+								villageArr = data;
+								map.clearOverlays();
+								for (var i = 0; i < villageArr.length; i++) {
+									villageArr[i].point = new BMap.Point(villageArr[i].villagecentlngb, villageArr[i].villagecentlatb);
+									villageArr[i].marker = new BMap.Marker(villageArr[i].point);
+									map.addOverlay(villageArr[i].marker);
+									villageArr[i].marker.setAnimation(BMAP_ANIMATION_BOUNCE);
+									var label = new BMap.Label(villageArr[i].villagename);
+									villageArr[i].marker.setLabel(label);
+
+									(function (village, i) {
+										// villageArr[i].marker.
+										villageArr[i].marker.addEventListener("click", function (e) {
+											// console.log(e);
+											console.log(village);
+											getvillageCarInfo(village);
+										})
+									})(villageArr[i], i)
+								}
+								var pointArr = []
+								villageArr.forEach(function (item) {
+									pointArr.push(item.point);
+								})
+								map.setViewport(pointArr);
+							})
+						})
+					})
 					// 全市汽车用户数据后的时间
-					$("#screen_a_data_car>.title>span").html(res.time+"月")
+					$("#screen_a_data_car>.title>span").html(res.time + "月")
 				});
 				// 热门团购车型
 				queryAjax({ fun: "hotTuangouCar" }, function (res) {
@@ -211,7 +248,7 @@ var clickEffect = {
 					console.log(result);
 					var html = template("js-village-rank", { list: result });
 					document.getElementById("js-car-village-rank").innerHTML = html;
-
+					
 					// 地图显示小区坐标
 					map.clearOverlays();
 					async.map(result, getVillage, function (err, res) {
@@ -245,6 +282,8 @@ var clickEffect = {
 					$("#js-car-village-rank tr").on("click", function () {
 						var villagecode = $(this).attr("data-id");
 						console.log(villagecode);
+						console.log($("this td"));
+						$("#districtarea").html("区 - " + $(this).attr("data-name"));
 						var data = {
 							fun: "guopaiInfo",
 							villagecode: villagecode

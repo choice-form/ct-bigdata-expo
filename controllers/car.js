@@ -126,6 +126,16 @@ var car = {
 				})
 				break;
 			// 
+			case "totalCareOfcarType":
+				q = url + "totalcareofcartype" + "?" + "type=" + encodeURI(data.type);
+				request.get(q, function (err, res, body) {
+					if (err) {
+						callback(err);
+					} else {
+						callback(null, body);
+					}
+				})
+				break;
 			default:
 				break;
 		}
