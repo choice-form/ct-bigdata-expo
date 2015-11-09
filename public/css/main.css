@@ -289,6 +289,7 @@ p {
   background-color: #39435e;
 }
 .title {
+  min-height: 34px;
   font-size: 1.4rem;
   padding: 5px 8px;
   color: #9dcc3b;
@@ -608,6 +609,9 @@ table tr.active td:nth-child(2) {
   top: 0;
   margin-top: 12px;
 }
+#js-car-careoftype > .title {
+  margin-bottom: 6px;
+}
 #js-car-careoftype > ul > li {
   background-color: #52bbb9;
   font-size: 1rem;
@@ -640,13 +644,13 @@ table tr.active td:nth-child(2) {
   left: 70px;
 }
 .screen_toggle.b > #screen_b_house_chart_all {
-  width: 73%;
+  width: 70%;
 }
 .screen_toggle.b > #screen_b_house_chart_all > .title {
   margin: 12px;
 }
 .screen_toggle.b > #screen_b_house_chart_all > .chartHouse {
-  width: 73%;
+  width: 70%;
   right: 0;
 }
 .screenBchart {
@@ -797,10 +801,9 @@ table tr.active td:nth-child(2) {
 }
 .chartCar > .chart:nth-child(n+4) {
   position: absolute;
-  bottom: 0;
   left: 12px;
   width: 54%;
-  height: 420px;
+  height: 100%;
 }
 .chartCar > .chart:nth-child(n+4) > p {
   font-size: 1.2rem;
@@ -810,11 +813,17 @@ table tr.active td:nth-child(2) {
   color: #9dcc3b;
   background-color: #1d2134;
 }
+.chartCar > .chart:nth-child(n+4) > .title {
+  margin-bottom: 36px;
+}
 .chartCar > .chart:nth-child(5) {
   right: 12px;
   left: auto;
   width: 40%;
-  height: 420px;
+  height: 100%;
+}
+.chartCar > .chart:nth-child(5) > .title {
+  margin-bottom: 18px;
 }
 .chartCar > .chart:nth-child(5) table {
   height: 376px;
@@ -865,11 +874,14 @@ table tr.active td:nth-child(2) {
 #car .none {
   display: none;
 }
+#car > .screen_toggle.dis > .title {
+  margin: 12px;
+}
 #js-car-hottuangou > p {
   font-size: 1.4rem;
-  line-height: 1.2rem;
+  line-height: 1.4rem;
   margin-bottom: 6px;
-  padding: 5px;
+  padding: 5px 8px;
   color: #9dcc3b;
   background-color: #1d2134;
 }
@@ -884,6 +896,9 @@ table tr.active td:nth-child(2) {
   width: 25%;
   overflow: hidden;
   text-align: center;
+}
+#house .grid-screen-b-house > .title {
+  margin-bottom: 12px;
 }
 #house .grid-screen-b-house > ul > li {
   text-align: center;

@@ -211,11 +211,9 @@
     }
     &:nth-child(n+4) {
       position: absolute;
-      bottom: 0;
       left: 12px;
-
       width: 54%;
-      height: 420px;
+      height: 100%;
       > p {
         font-size: 1.2rem;
         line-height: 1.4rem;
@@ -226,13 +224,18 @@
         color: @green1;
         background-color: @blue3;
       }
+      >.title{
+        margin-bottom: 36px;
+      }
     }
     &:nth-child(5) {
       right: 12px;
       left: auto;
-
       width: 40%;
-      height: 420px;
+      height: 100%;
+      >.title{
+        margin-bottom: 18px;
+      }
       table {
         height: 376px;
       }
@@ -307,14 +310,19 @@
   .none{
     display: none;
   }
+  >.screen_toggle.dis{
+    >.title{
+      margin: 12px;
+    }
+  }
 }
 
 #js-car-hottuangou{
   > p {
     font-size: 1.4rem;
-    line-height: 1.2rem;
+    line-height: 1.4rem;
     margin-bottom: 6px;
-    padding: 5px;
+    padding: 5px 8px;
     color: #9dcc3b;
     background-color: #1d2134;
   }
