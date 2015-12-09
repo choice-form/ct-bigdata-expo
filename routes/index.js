@@ -20,8 +20,32 @@ router.get('/travel', function (req, res) {
   res.render('main_tourism', { title: '上海电信大数据区域洞察信息展示 Shanghai Telecom Big Data Area Insight Information Display' });
 });
 
+router.get('/travel_1', function (req, res) {
+  res.render('main_tourism_1', { title: '上海电信大数据区域洞察信息展示 Shanghai Telecom Big Data Area Insight Information Display' });
+});
+
+router.get('/travel_2', function (req, res) {
+  res.render('main_tourism_2', { title: '上海电信大数据区域洞察信息展示 Shanghai Telecom Big Data Area Insight Information Display' });
+});
+
+router.get('/travel_3', function (req, res) {
+  res.render('main_tourism_3', { title: '上海电信大数据区域洞察信息展示 Shanghai Telecom Big Data Area Insight Information Display' });
+});
+
+router.get('/travel_4', function (req, res) {
+  res.render('main_tourism_4', { title: '上海电信大数据区域洞察信息展示 Shanghai Telecom Big Data Area Insight Information Display' });
+});
+
 router.get('/car', function (req, res) {
   res.render('main_car', { title: '上海电信大数据区域洞察信息展示 Shanghai Telecom Big Data Area Insight Information Display' });
+});
+
+router.get('/car_1', function (req, res) {
+  res.render('main_car_1', { title: '上海电信大数据区域洞察信息展示 Shanghai Telecom Big Data Area Insight Information Display' });
+});
+
+router.get('/car_2', function (req, res) {
+  res.render('main_car_2', { title: '上海电信大数据区域洞察信息展示 Shanghai Telecom Big Data Area Insight Information Display' });
 });
 
 // post 旅游

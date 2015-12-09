@@ -1,0 +1,54 @@
+gruthtml
+    include template/head
+body(scroll="no")
+    .body-wrapper#full_car_1
+        header
+            img(src= '../img/ct-logo.svg' height= '24')
+            h1=title
+
+        section.screen-l.fullscreen
+          .tabs.fullscreen
+            #tab-3.panel.fullscreen
+              .screen_toggle.a.grid.grid-car.dis.fullscreen(style='display:block')
+                table#js-car-village-rank(width="100%" height="100%")
+                  tr.row
+                    td(style='width:20%') 排名
+                    td(style='width:20%') 居委名称
+                    td(style='width:20%') 关心汽车的户数
+                  tr
+                    td(style='width:20%') 1
+                    td(style='width:20%') 四季花城
+                    td(style='width:20%') 234
+                  tr
+                    td(style='width:20%') 2
+                    td(style='width:20%') 上海湾
+                    td(style='width:20%') 334
+                table#js-car-village-rank(width="100%" height="100%")
+                  | <script id="js-village-rank" type="text/html">
+                  |    <tr class="row">
+                  |        <td width="20%">排名</td>
+                  |        <td width="45%">居委名称</td>
+                  |        <td width="35%">关心汽车的户数</td>
+                  |    </tr>
+                  | {{each list as value i}}
+                  |    <tr data-id="{{value.villagecode}}" data-name="{{value.villagename}}">
+                  |        <td width="20%">{{i+1}}</td>
+                  |        <td width="45%">{{value.villagename}}</td>
+                  |        <td width="35%">{{value.careofhousenum}}</td>
+                  |    </tr>
+                  | {{/each}}
+                  | </script>
+
+
+
+  script(type="text/javascript",src="../script/jquery-2.1.4.min.js")
+  //script(type="text/javascript",src="../script/tabslet.min.js")
+  //// script(type="text/javascript",src="../script/screenfull.min.js")
+  //script(type="text/javascript",src="../components/artTemplate/dist/template.js")
+  //script(type="text/javascript",src="../script/echarts-all.js")
+  //script(type="text/javascript",src="http://api.map.baidu.com/api?v=2.0&ak=rliB8PI3C2rd1HrNyMQBOxAd")
+  //script(type="text/javascript",src="../script/main.js")
+  //// script(type="text/javascript",src="../script/car/car_main.js")
+  //script(type="text/javascript",src="../components/async/dist/async.js")
+  //script(type="text/javascript",src="../script/myTheme.js")
+  //script(type="text/javascript",src="../script/car/car.js")
