@@ -7,8 +7,8 @@ body(scroll="no")
             h1=title
         include template/nav
         #full_car_2
-          .screen_toggle.b.dis.fullscreen(style='top: 44px !important;display:block')
-            .title(style='margin-bottom: 12px;')
+          .screen_toggle.b.dis
+            .title
               p#districttext
                 p#districtarea 区 - 居委
             .chartCar.screenBchart
@@ -20,7 +20,7 @@ body(scroll="no")
                 .title
                   p 小区内关心的车辆品牌 (TOP 10)
                 .grid.grid-car-brands
-                  table#js-car-careofbradntop10(width="100%" height='auto')
+                  table#js-car-careofbradntop10(width="100%" height='100%')
                     tr
                       td 1
                       td bieke
