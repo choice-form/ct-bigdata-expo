@@ -112,13 +112,6 @@ nav#js-travel-date > p {
 nav.active {
   display: block;
 }
-.screen_toggle.fullscreen {
-  padding: 12px !important;
-  left: 0 !important;
-  top: 0 !important;
-  right: 0 !important;
-  bottom: 0 !important;
-}
 #full_car_2 .chartCar > .chart {
   width: 50%;
 }
@@ -133,9 +126,22 @@ nav.active {
 #full_car_2 .chartCar > .chart:last-of-type .grid-car-brands table {
   height: 924px !important;
 }
-#full_car_1 .tabs .panel.fullscreen {
+#full_car_1 {
+  background-color: #39435e;
+  position: absolute;
+  right: 0;
+  left: 70px;
+  top: 44px;
+  bottom: 0;
+  padding: 12px;
+}
+#full_car_1 > .screen_toggle {
+  display: block;
+  position: relative !important;
   left: 0 !important;
-  padding: 12px !important;
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
 }
 #full_travel_1 {
   background-color: #39435e;

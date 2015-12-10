@@ -108,14 +108,6 @@ nav.active {
 
 
 
-.screen_toggle.fullscreen{
-  padding: 12px !important;
-  left: 0 !important;
-  top: 0 !important;
-  right: 0 !important;
-  bottom: 0 !important;
-}
-
 #full_car_2{
   .chartCar{
     >.chart{
@@ -147,11 +139,22 @@ nav.active {
 
 
 #full_car_1{
-  .tabs .panel.fullscreen{
-    left:0 !important;
-    padding: 12px !important;
-  }
+  background-color: #39435e;
+  position: absolute;
+  right: 0;
+  left: 70px;
+  top: 44px;
+  bottom: 0;
+  padding: 12px;
 
+  >.screen_toggle{
+    display: block;
+    position: relative !important;
+    left: 0 !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+  }
 }
 
 #full_travel_1{

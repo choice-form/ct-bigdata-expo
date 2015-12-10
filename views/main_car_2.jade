@@ -1,62 +1,59 @@
 gruthtml
     include template/head
 body(scroll="no")
-    .body-wrapper#full_car_2
+    .body-wrapper
         header
             img(src= '../img/ct-logo.svg' height= '24')
             h1=title
-
-        .screen_toggle.b.dis.fullscreen(style='top: 44px !important;display:block')
-          .title(style='margin-bottom: 12px;')
-            p#districttext
-              p#districtarea 区 - 居委
-          .chartCar.screenBchart
-            .chart
-              .title
-                p 小区内关心的车型人数比例
-              .e-chart#chartCar_C
-            .chart
-              .title
-                p 小区内关心的车辆品牌 (TOP 10)
-              .grid.grid-car-brands
-                table#js-car-careofbradntop10(width="100%" height='auto')
-                  tr
-                    td 1
-                    td bieke
-                  tr
-                    td 1
-                    td bieke
-                  tr
-                    td 1
-                    td bieke
-                  tr
-                    td 1
-                    td bieke
-                  tr
-                    td 1
-                    td bieke
-                  tr
-                    td 1
-                    td bieke
-                  tr
-                    td 1
-                    td bieke
-                  tr
-                    td 1
-                    td bieke
-                  <tr>
-                  |      <td>{{i+1}}</td>
-                  |      <td>{{value}}</td>
-                  |  </tr>
-                table#js-car-careofbradntop10(width="100%" height="100%")
-                  |  <script id = "js-careofbradntop10" type="text/html">
-                  | {{each list as value i}}
-                  |  <tr>
-                  |      <td>{{i+1}}</td>
-                  |      <td>{{value}}</td>
-                  |  </tr>
-                  | {{/each}}
-                  | </script>
+        include template/nav
+        #full_car_2
+          .screen_toggle.b.dis.fullscreen(style='top: 44px !important;display:block')
+            .title(style='margin-bottom: 12px;')
+              p#districttext
+                p#districtarea 区 - 居委
+            .chartCar.screenBchart
+              .chart
+                .title
+                  p 小区内关心的车型人数比例
+                .e-chart#chartCar_C
+              .chart
+                .title
+                  p 小区内关心的车辆品牌 (TOP 10)
+                .grid.grid-car-brands
+                  table#js-car-careofbradntop10(width="100%" height='auto')
+                    tr
+                      td 1
+                      td bieke
+                    tr
+                      td 1
+                      td bieke
+                    tr
+                      td 1
+                      td bieke
+                    tr
+                      td 1
+                      td bieke
+                    tr
+                      td 1
+                      td bieke
+                    tr
+                      td 1
+                      td bieke
+                    tr
+                      td 1
+                      td bieke
+                    tr
+                      td 1
+                      td bieke
+                  table#js-car-careofbradntop10(width="100%" height="100%")
+                    |  <script id = "js-careofbradntop10" type="text/html">
+                    | {{each list as value i}}
+                    |  <tr>
+                    |      <td>{{i+1}}</td>
+                    |      <td>{{value}}</td>
+                    |  </tr>
+                    | {{/each}}
+                    | </script>
 
 
   script(type="text/javascript",src="../script/jquery-2.1.4.min.js")
