@@ -109,32 +109,70 @@ nav.active {
 
 
 #full_car_2{
-  .chartCar{
-    >.chart{
-      width: 50%;
+  background-color: #39435e;
+  position: absolute;
+  right: 0;
+  left: 70px;
+  top: 44px;
+  bottom: 0;
+  padding: 12px;
+  >.screen_toggle{
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    display: block !important;
 
-      &:first-of-type{
-        .e-chart{
-          clear: both;
-          right: 0;
-          left: 0;
-          padding: 0 24px;
-          height: 924px !important;
-          background-color: yellow;
+    >.title{
+      padding: 24px;
+      margin-bottom: 12px;
+    }
+    >.chartCar{
+      height:934px;
+      >.chart{
+        width: 50%;
+        height: 100%;
+        >.title{
+          padding: 24px;
         }
-      }
+        >.e-chart,{
+          top: 70px;
+          right: 24px;
+          bottom: 0;
+          left: 24px;
+        }
+        >.grid{
+          top: 70px;
+          right: 24px;
+          bottom: 0;
+          left: 24px;
+          position: absolute;
 
-      &:last-of-type{
-        .grid-car-brands{
-          table{
-            height: 924px !important;
+        }
+        &:nth-child(1){
+          >.e-chart{
+            background-color: yellow;
+          }
+        }
+
+        &:nth-child(2){
+          >.grid tr{
+            &>td{
+              border-bottom: 1px solid #52bbb9;
+            }
+            &>td:last-of-type{
+              border-right:none;
+            }
+            &:last-of-type >td{
+              border-bottom:none;
+            }
           }
         }
       }
     }
   }
-
-
 }
 
 
