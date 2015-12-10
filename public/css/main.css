@@ -112,6 +112,36 @@ nav#js-travel-date > p {
 nav.active {
   display: block;
 }
+.grid table tr > th,
+.grid table tr > td {
+  border-right: 1px solid #52bbb9;
+  border-bottom: 1px solid #52bbb9;
+}
+.grid table tr > th:last-of-type,
+.grid table tr > td:last-of-type {
+  border-right: none;
+}
+.grid table tr:last-of-type > th,
+.grid table tr:last-of-type > td {
+  border-bottom: none;
+}
+#full_car_1 {
+  background-color: #39435e;
+  position: absolute;
+  right: 0;
+  left: 70px;
+  top: 44px;
+  bottom: 0;
+  padding: 12px;
+}
+#full_car_1 > .screen_toggle {
+  display: block;
+  position: relative !important;
+  left: 0 !important;
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+}
 #full_car_2 {
   background-color: #39435e;
   position: absolute;
@@ -160,8 +190,10 @@ nav.active {
 #full_car_2 > .screen_toggle > .chartCar > .chart:nth-child(1) > .e-chart {
   background-color: yellow;
 }
-#full_car_2 > .screen_toggle > .chartCar > .chart:nth-child(2) > .grid tr > td {
-  border-bottom: 1px solid #52bbb9;
+#full_car_2 > .screen_toggle > .chartCar > .chart:nth-child(2) > .grid tr {
+  /* &>td{
+               border-bottom: 1px solid #52bbb9;
+             }*/
 }
 #full_car_2 > .screen_toggle > .chartCar > .chart:nth-child(2) > .grid tr > td:last-of-type {
   border-right: none;
@@ -169,7 +201,7 @@ nav.active {
 #full_car_2 > .screen_toggle > .chartCar > .chart:nth-child(2) > .grid tr:last-of-type > td {
   border-bottom: none;
 }
-#full_car_1 {
+#full_travel_1 {
   background-color: #39435e;
   position: absolute;
   right: 0;
@@ -178,44 +210,70 @@ nav.active {
   bottom: 0;
   padding: 12px;
 }
-#full_car_1 > .screen_toggle {
-  display: block;
-  position: relative !important;
-  left: 0 !important;
-  top: 0 !important;
-  right: 0 !important;
-  bottom: 0 !important;
-}
-#full_travel_1 {
-  background-color: #39435e;
-}
 #full_travel_1 > .grid-tourism {
-  margin-top: 44px;
-  padding: 12px;
   width: 50% !important;
   height: 924px !important;
 }
-#full_travel_1 > .grid-tourism table {
-  height: 100% !important;
+#full_travel_1 > .grid-tourism > p {
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+#full_travel_1 > .grid-tourism > table {
+  height: 968px !important;
+}
+#full_travel_1 > .grid-tourism:nth-child(1) {
+  padding-right: 6px;
+}
+#full_travel_1 > .grid-tourism:nth-child(2) {
+  padding-left: 6px;
 }
 #full_travel_2 {
   background-color: #39435e;
+  position: absolute;
+  right: 0;
+  left: 70px;
+  top: 44px;
+  bottom: 0;
+  padding: 12px;
 }
-#full_travel_2 .grid-tourism {
-  height: 924px !important;
+#full_travel_2 > .title {
+  padding: 24px;
+  margin-bottom: 12px;
 }
-#full_travel_2 .grid-tourism table {
-  height: 100% !important;
+#full_travel_2 > .title > p {
+  width: 50%;
 }
-#full_travel_2 .tourism-chart {
-  height: 924px !important;
+#full_travel_2 > .tourism-top {
+  width: 50%;
+  margin-left: 0;
+  padding-right: 6px;
+  height: 932px;
+}
+#full_travel_2 > .tourism-top > .grid-tourism {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  height: auto;
+}
+#full_travel_2 > .tourism-top > .grid-tourism > table {
+  height: 100%;
+}
+#full_travel_2 > .tourism-chart {
+  width: 50%;
+  margin-right: 0;
+  padding-left: 6px;
+  height: 932px;
+}
+#full_travel_2 > .tourism-chart > .e-chart {
   background-color: yellow;
 }
 #full_travel_3 {
   background-color: #39435e;
   position: absolute;
   right: 0;
-  left: 0;
+  left: 70px;
   top: 44px;
   bottom: 0;
   padding: 12px;
@@ -247,7 +305,7 @@ nav.active {
   background-color: #39435e;
   position: absolute;
   right: 0;
-  left: 0;
+  left: 70px;
   top: 44px;
   bottom: 0;
   padding: 12px;
