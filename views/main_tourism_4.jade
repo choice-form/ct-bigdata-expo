@@ -1,0 +1,42 @@
+html
+    include template/head
+body
+    #main_tourism.body-wrapper
+        header
+            img(src= '../img/ct-logo.svg' height= '24')
+            h1=title
+
+        #full_travel_4
+            .chart
+              .title
+                p 沪上热门 TOP10 商圈 (本地游客)
+              include template/chart/chartTourism_C.jade
+            .chart
+              .title
+                p 沪上热门 TOP10 商圈 (外地游客)
+              include template/chart/chartTourism_D.jade
+            .chart#js-travel-stayhome-screen-b
+              .title
+                p 是否外出情况
+              ul
+                li
+                  p 浦东
+                  h2 34534435
+                li
+                  p 浦西
+                  h2 34534435
+                li
+                  p 宅在家
+                  h2 34534435
+
+  script(type="text/javascript",src="../script/jquery-2.1.4.min.js")
+  //script(type="text/javascript",src="../script/tabslet.min.js")
+  //// script(type="text/javascript",src="../script/screenfull.min.js")
+  //script(type="text/javascript",src="../components/artTemplate/dist/template.js")
+  //script(type="text/javascript",src="../script/echarts-all.js")
+  //script(type="text/javascript",src="http://api.map.baidu.com/api?v=2.0&ak=rliB8PI3C2rd1HrNyMQBOxAd")
+  //script(type="text/javascript",src="../script/main.js")
+  //// script(type="text/javascript",src="../script/car/car_main.js")
+  //script(type="text/javascript",src="../components/async/dist/async.js")
+  //script(type="text/javascript",src="../script/myTheme.js")
+  //script(type="text/javascript",src="../script/car/car.js")

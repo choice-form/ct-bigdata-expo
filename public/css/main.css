@@ -163,6 +163,7 @@ nav.active {
   background-color: yellow;
 }
 #full_travel_3 {
+  background-color: #39435e;
   position: absolute;
   right: 0;
   left: 0;
@@ -192,6 +193,54 @@ nav.active {
 }
 #full_travel_3 .chart:nth-child(2) {
   float: right;
+}
+#full_travel_4 {
+  background-color: #39435e;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 44px;
+  bottom: 0;
+  padding: 12px;
+}
+#full_travel_4 .chart:nth-child(1) {
+  padding-right: 6px;
+  width: 40%;
+  float: left;
+}
+#full_travel_4 .chart:nth-child(2) {
+  padding-left: 6px;
+  width: 40%;
+  float: left;
+}
+#full_travel_4 .chart:nth-child(3) {
+  padding-left: 12px;
+  width: 20%;
+  float: right;
+}
+#full_travel_4 .chart:nth-child(3) > ul > li {
+  height: 33.3%;
+  color: #9dcc3b;
+  padding: 2.8rem 8px;
+}
+#full_travel_4 .chart:nth-child(3) > ul > li:nth-of-type(-n+2) {
+  border-bottom: 1px solid #52bbb9;
+}
+#full_travel_4 .chart:nth-child(3) > ul > li > p {
+  font-size: 1.4rem;
+  margin-bottom: 24px;
+}
+#full_travel_4 .chart:nth-child(3) > ul > li > h2 {
+  font-size: 2rem;
+  line-height: 2.2rem;
+}
+#full_travel_4 .chart > .title {
+  padding: 24px;
+}
+#full_travel_4 .chart > .e-chart {
+  position: relative !important;
+  height: 946px;
+  background-color: yellow;
 }
 .chart {
   position: relative;
