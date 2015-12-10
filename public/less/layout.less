@@ -160,6 +160,10 @@ nav.active {
     margin-top: 44px;
     padding: 12px;
     width: 50% !important;
+    height: 924px !important;
+    table{
+      height: 100% !important;
+    }
   }
 }
 #full_travel_2{
@@ -175,5 +179,38 @@ nav.active {
   .tourism-chart{
     height: 924px !important;
     background-color: yellow;
+  }
+}
+
+#full_travel_3{
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 44px;
+  bottom: 0;
+  padding: 12px;
+
+  .chart{
+    width: 50%;
+    &:nth-child(1){
+      padding-right: 6px;
+    }
+    &:nth-child(2){
+      padding-left: 6px;
+    }
+    >.title{
+      padding: 24px;
+    }
+    >.e-chart{
+      position: relative !important;
+      height: 946px;
+      background-color: yellow;
+    }
+    &:nth-child(1){
+      float: left;
+    }
+    &:nth-child(2){
+      float: right;
+    }
   }
 }

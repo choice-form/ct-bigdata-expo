@@ -144,6 +144,10 @@ nav.active {
   margin-top: 44px;
   padding: 12px;
   width: 50% !important;
+  height: 924px !important;
+}
+#full_travel_1 > .grid-tourism table {
+  height: 100% !important;
 }
 #full_travel_2 {
   background-color: #39435e;
@@ -157,6 +161,37 @@ nav.active {
 #full_travel_2 .tourism-chart {
   height: 924px !important;
   background-color: yellow;
+}
+#full_travel_3 {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 44px;
+  bottom: 0;
+  padding: 12px;
+}
+#full_travel_3 .chart {
+  width: 50%;
+}
+#full_travel_3 .chart:nth-child(1) {
+  padding-right: 6px;
+}
+#full_travel_3 .chart:nth-child(2) {
+  padding-left: 6px;
+}
+#full_travel_3 .chart > .title {
+  padding: 24px;
+}
+#full_travel_3 .chart > .e-chart {
+  position: relative !important;
+  height: 946px;
+  background-color: yellow;
+}
+#full_travel_3 .chart:nth-child(1) {
+  float: left;
+}
+#full_travel_3 .chart:nth-child(2) {
+  float: right;
 }
 .chart {
   position: relative;
