@@ -1,15 +1,16 @@
 html
   include template/head
 body
-  #main_tourism.body-wrapper
+  #main_tourism.body-wrapper.subpage
     header
       img(src= '../img/ct-logo.svg' height= '24')
       h1=title
 
     include template/nav_tourism
     .screen_toggle.b.all-active.fullscreen#full_travel_2
-      .title.col
+      .title
         p 热门 TOP10 APP
+      .title
         p 热门交通出游方式
       .tourism-top.screenBchart
         .grid.grid-tourism

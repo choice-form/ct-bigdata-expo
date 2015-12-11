@@ -106,4 +106,4 @@ setInterval(function () {
 	if (n >= distArr.length) {
 		n = 0;
 	}
-}, 2000);
+}, 5000);

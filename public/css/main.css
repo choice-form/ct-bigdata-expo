@@ -125,31 +125,71 @@ nav.active {
 .grid table tr:last-of-type > td {
   border-bottom: none;
 }
-#full_car_1 {
+.subpage nav {
+  width: 120px;
+}
+.subpage a,
+.subpage p {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+#full_car_1,
+#full_car_2,
+#full_travel_1,
+#full_travel_2,
+#full_travel_3,
+#full_travel_4 {
   background-color: #39435e;
   position: absolute;
   right: 0;
-  left: 70px;
+  left: 120px;
   top: 44px;
   bottom: 0;
+  padding: 24px;
+}
+#full_car_1 .title,
+#full_car_2 .title,
+#full_travel_1 .title,
+#full_travel_2 .title,
+#full_travel_3 .title,
+#full_travel_4 .title {
+  font-size: 36px;
   padding: 12px;
+  margin-bottom: 24px;
+}
+#full_car_1 .title > p,
+#full_car_2 .title > p,
+#full_travel_1 .title > p,
+#full_travel_2 .title > p,
+#full_travel_3 .title > p,
+#full_travel_4 .title > p {
+  line-height: 36px;
+  float: left;
+}
+#full_car_1 table,
+#full_car_2 table,
+#full_travel_1 table,
+#full_travel_2 table,
+#full_travel_3 table,
+#full_travel_4 table {
+  font-size: 1.4rem !important;
+}
+#full_car_1 table th,
+#full_car_2 table th,
+#full_travel_1 table th,
+#full_travel_2 table th,
+#full_travel_3 table th,
+#full_travel_4 table th {
+  font-size: 1.4rem !important;
 }
 #full_car_1 > .screen_toggle {
   display: block;
-  position: relative !important;
-  left: 0 !important;
-  top: 0 !important;
-  right: 0 !important;
-  bottom: 0 !important;
+  position: relative;
 }
-#full_car_2 {
-  background-color: #39435e;
-  position: absolute;
-  right: 0;
-  left: 70px;
-  top: 44px;
-  bottom: 0;
-  padding: 12px;
+#full_car_1 > .screen_toggle > table {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 84px;
 }
 #full_car_2 > .screen_toggle {
   position: relative;
@@ -160,102 +200,92 @@ nav.active {
   height: 100%;
   display: block !important;
 }
-#full_car_2 > .screen_toggle > .title {
-  padding: 24px;
-  margin-bottom: 12px;
+#full_car_2 > .screen_toggle > .screenBchart {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 84px;
 }
-#full_car_2 > .screen_toggle > .chartCar {
-  height: 934px;
-}
-#full_car_2 > .screen_toggle > .chartCar > .chart {
+#full_car_2 > .screen_toggle > .screenBchart > .chart {
   width: 50%;
   height: 100%;
+  padding: 0;
 }
-#full_car_2 > .screen_toggle > .chartCar > .chart > .title {
-  padding: 24px;
+#full_car_2 > .screen_toggle > .screenBchart > .chart:nth-child(1) {
+  padding-right: 12px;
 }
-#full_car_2 > .screen_toggle > .chartCar > .chart > .e-chart {
-  top: 70px;
-  right: 24px;
-  bottom: 0;
-  left: 24px;
-}
-#full_car_2 > .screen_toggle > .chartCar > .chart > .grid {
-  top: 70px;
-  right: 24px;
-  bottom: 0;
-  left: 24px;
-  position: absolute;
-}
-#full_car_2 > .screen_toggle > .chartCar > .chart:nth-child(1) > .e-chart {
+#full_car_2 > .screen_toggle > .screenBchart > .chart:nth-child(1) > .e-chart {
+  width: 100%;
+  position: relative;
+  height: 820px;
   background-color: yellow;
 }
-#full_car_2 > .screen_toggle > .chartCar > .chart:nth-child(2) > .grid tr {
-  /* &>td{
-               border-bottom: 1px solid #52bbb9;
-             }*/
+#full_car_2 > .screen_toggle > .screenBchart > .chart:nth-child(2) {
+  padding-left: 12px;
 }
-#full_car_2 > .screen_toggle > .chartCar > .chart:nth-child(2) > .grid tr > td:last-of-type {
+#full_car_2 > .screen_toggle > .screenBchart > .chart:nth-child(2) > .grid {
+  width: 100%;
+  position: relative;
+  height: 820px;
+}
+#full_car_2 > .screen_toggle > .screenBchart > .chart:nth-child(2) > .grid tr > td:last-of-type {
   border-right: none;
 }
-#full_car_2 > .screen_toggle > .chartCar > .chart:nth-child(2) > .grid tr:last-of-type > td {
+#full_car_2 > .screen_toggle > .screenBchart > .chart:nth-child(2) > .grid tr:last-of-type > td {
   border-bottom: none;
-}
-#full_travel_1 {
-  background-color: #39435e;
-  position: absolute;
-  right: 0;
-  left: 70px;
-  top: 44px;
-  bottom: 0;
-  padding: 12px;
 }
 #full_travel_1 > .grid-tourism {
   width: 50% !important;
-  height: 924px !important;
+  height: 100% !important;
 }
 #full_travel_1 > .grid-tourism > p {
   font-size: 1.6rem;
   line-height: 2rem;
 }
 #full_travel_1 > .grid-tourism > table {
-  height: 968px !important;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 84px;
 }
 #full_travel_1 > .grid-tourism:nth-child(1) {
-  padding-right: 6px;
+  padding-right: 12px;
 }
 #full_travel_1 > .grid-tourism:nth-child(2) {
-  padding-left: 6px;
-}
-#full_travel_2 {
-  background-color: #39435e;
-  position: absolute;
-  right: 0;
-  left: 70px;
-  top: 44px;
-  bottom: 0;
-  padding: 12px;
+  padding-left: 12px;
 }
 #full_travel_2 > .title {
-  padding: 24px;
-  margin-bottom: 12px;
-}
-#full_travel_2 > .title > p {
   width: 50%;
+  float: left;
+  position: relative;
+}
+#full_travel_2 > .title:nth-child(1):after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #39435e;
+}
+#full_travel_2 > .title:nth-child(2) {
+  padding-left: 24px;
+}
+#full_travel_2 > .title:nth-child(2):after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #39435e;
 }
 #full_travel_2 > .tourism-top {
-  width: 50%;
+  width: 50% !important;
   margin-left: 0;
-  padding-right: 6px;
-  height: 932px;
+  padding-right: 12px;
+  height: 904px;
 }
 #full_travel_2 > .tourism-top > .grid-tourism {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  height: auto;
+  height: 100%;
 }
 #full_travel_2 > .tourism-top > .grid-tourism > table {
   height: 100%;
@@ -263,36 +293,26 @@ nav.active {
 #full_travel_2 > .tourism-chart {
   width: 50%;
   margin-right: 0;
-  padding-left: 6px;
-  height: 932px;
+  padding-left: 12px;
+  height: 904px;
 }
 #full_travel_2 > .tourism-chart > .e-chart {
+  position: relative;
   background-color: yellow;
-}
-#full_travel_3 {
-  background-color: #39435e;
-  position: absolute;
-  right: 0;
-  left: 70px;
-  top: 44px;
-  bottom: 0;
-  padding: 12px;
 }
 #full_travel_3 .chart {
   width: 50%;
+  height: 100%;
 }
 #full_travel_3 .chart:nth-child(1) {
-  padding-right: 6px;
+  padding-right: 12px;
 }
 #full_travel_3 .chart:nth-child(2) {
-  padding-left: 6px;
-}
-#full_travel_3 .chart > .title {
-  padding: 24px;
+  padding-left: 12px;
 }
 #full_travel_3 .chart > .e-chart {
   position: relative !important;
-  height: 946px;
+  height: 904px;
   background-color: yellow;
 }
 #full_travel_3 .chart:nth-child(1) {
@@ -301,29 +321,26 @@ nav.active {
 #full_travel_3 .chart:nth-child(2) {
   float: right;
 }
-#full_travel_4 {
-  background-color: #39435e;
-  position: absolute;
-  right: 0;
-  left: 70px;
-  top: 44px;
-  bottom: 0;
-  padding: 12px;
+#full_travel_4 .chart {
+  height: 100%;
 }
 #full_travel_4 .chart:nth-child(1) {
-  padding-right: 6px;
+  padding-right: 12px;
   width: 40%;
   float: left;
 }
 #full_travel_4 .chart:nth-child(2) {
-  padding-left: 6px;
+  padding-left: 12px;
   width: 40%;
   float: left;
 }
 #full_travel_4 .chart:nth-child(3) {
-  padding-left: 12px;
+  padding-left: 24px;
   width: 20%;
   float: right;
+}
+#full_travel_4 .chart:nth-child(3) > ul {
+  height: 904px;
 }
 #full_travel_4 .chart:nth-child(3) > ul > li {
   height: 33.3%;
@@ -341,12 +358,9 @@ nav.active {
   font-size: 2rem;
   line-height: 2.2rem;
 }
-#full_travel_4 .chart > .title {
-  padding: 24px;
-}
 #full_travel_4 .chart > .e-chart {
   position: relative !important;
-  height: 946px;
+  height: 904px;
   background-color: yellow;
 }
 .chart {

@@ -120,7 +120,7 @@ function hotTrafficLocal(date){
             }
         ]
     };
-                    
+
     var chart = echarts.init(document.getElementById("chartTourism_A"));
     chart.setTheme(myTheme);
     chart.setOption(opt);
@@ -170,7 +170,7 @@ function hotTrafficField(date){
             }
         ]
     };
-                    
+
     var chart = echarts.init(document.getElementById("chartTourism_B"));
     chart.setTheme(myTheme);
     chart.setOption(opt);
@@ -206,7 +206,7 @@ function hotTraffic(date){
             }
           ]
       };
-    
+
     var chart = echarts.init(document.getElementById("chartTourism_E"));
     chart.setTheme(myTheme);
     chart.setOption(opt);
@@ -329,7 +329,7 @@ $(document).ready(function () {
         if(n>=length){
             n = 0;
         }
-      },3000);
+      },5000);
     });
 });
 

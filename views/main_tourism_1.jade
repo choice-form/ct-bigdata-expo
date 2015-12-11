@@ -1,7 +1,7 @@
 html
     include template/head
 body
-    #main_tourism.body-wrapper
+    #main_tourism.body-wrapper.subpage
         header
             img(src= '../img/ct-logo.svg' height= '24')
             h1=title
@@ -9,7 +9,9 @@ body
         include template/nav_tourism
         .screen_toggle.a.all-active#full_travel_1
           .grid.grid-tourism
-            p 线上热搜词排名 (TOP 10)
+            .title
+              p 线上热搜词排名 (TOP 10)
+
             table(width="100%")#js-travel-hotkey-screen-a
               tr.row
                 th(width="12%") 排名
@@ -39,7 +41,8 @@ body
                   |      {{/each}}
 
           .grid.grid-tourism
-            p 出行热门旅游地 (TOP 10)
+            .title
+              p 线上热搜词排名 (TOP 10)
             table(width="100%")#js-travel-hotTravel-screen-a
               tr.row
                 th(width="12%") 排名
