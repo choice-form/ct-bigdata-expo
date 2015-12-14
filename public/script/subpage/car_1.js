@@ -56,6 +56,7 @@ function getVillageRanking(addresstext, callback) {
 	};
 
 	queryAjax(data, function (result) {
+		$("#districttext").html("addresstext");
 		console.log(addresstext + "区" + "关系汽车的小区排名")
 		console.log(result);
 		var html = template("js-village-rank", { list: result });

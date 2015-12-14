@@ -138,7 +138,7 @@ function hotTrafficField(date){
             trigger: 'axis'
         },
         grid: {
-            x: 120,
+            x: 150,
             y: 30,
             x2: 40,
             y2: 30,
